@@ -186,8 +186,6 @@
  '(ediff-odd-diff-A ((((class color)) nil)))
  '(ediff-odd-diff-B ((((class color)) nil)))
 
- ;; Cyberpunk additions added by https://github.com/n3mo follow:
-
  ;; org-mode custom faces
  `(org-agenda-date-today
    ((((class color)) (:foreground "#FF6400" :slant italic :weight bold))) t)
@@ -198,8 +196,6 @@
 					       (:line-width 1 :style released-button)))))
  `(org-column ((((class color)) (:background "#E9C062"
 					     :foreground "black"))))
-
-
 )
 
 (provide-theme 'cyberpunk)
