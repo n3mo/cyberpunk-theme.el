@@ -23,4 +23,4 @@ If you want cyberpunk-theme to be set at startup, add the following line to your
 Acknowledgments 
 ===============
 
-This theme was originally made available on the overtone/emacs-live github page (https://github.com/overtone/emacs-live) for use with the color-theme package. Additionally, the initial cyberpunk-theme lacked many mode-specific faces. This file strives to be as mode-specific as possible, with further tweaks that suit my fancy.
+This theme is a port of the overtone/emacs-live theme of the same name (https://github.com/overtone/emacs-live). The original theme was designed for use with the color-theme package. This theme adopts the new built-in theme support <code>deftheme</code>. Additionally, this theme strives to offer as many mode-specific customizations as possible, with further tweaks that suit my fancy.
