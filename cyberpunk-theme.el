@@ -31,171 +31,600 @@
 ;; file strives to be as mode-specific as possible, with further
 ;; tweaks that suit my fancy.
 
-(deftheme cyberpunk
-    "")
+(deftheme cyberpunk "The Cyberpunk color theme")
 
-(custom-theme-set-faces
- 'cyberpunk
- '(default ((t (:background "black" :foreground "light gray"))))
- '(highlight ((t (:background "DarkOrange"))))
- ;; '(region ((t (:foreground "black" :background "#7F073F"))))
- '(region ((t ( :background "#7F073F"))))
- '(blue ((t (:foreground "blue"))))
- '(bold ((t (:bold t))))
- '(bold-italic ((t (:bold t))))
- '(border-glyph ((t (nil))))
- '(buffers-tab ((t (:background "#0C1021" :foreground "#F8F8F8"))))
- '(blue ((t (:foreground "blue"))))
- '(bold ((t (:bold t))))
- '(bold-italic ((t (:bold t))))
- '(border-glyph ((t (nil))))
- '(buffers-tab ((t (:background "#0C1021" :foreground "#F8F8F8"))))
+(let ((class '((class color) (min-colors 89)))
+      ;; Cyberpunk palette
+      (cyberpunk-fg "#dcdccc")
+      (cyberpunk-fg-1 "#656555")
+      (cyberpunk-bg-1 "#2b2b2b")
+      (cyberpunk-bg-05 "#383838")
+      (cyberpunk-bg "#000000")
+      (cyberpunk-bg+1 "#4f4f4f")
+      (cyberpunk-bg+2 "#5f5f5f")
+      (cyberpunk-bg+3 "#6f6f6f")
+      (cyberpunk-red+1 "#dca3a3")
+      (cyberpunk-red "#ff0000")
+      (cyberpunk-red-1 "#8b0000")
+      (cyberpunk-red-2 "#8b0000")
+      (cyberpunk-red-3 "#9c6363")
+      (cyberpunk-red-4 "#8c5353")
+      (cyberpunk-red-5 "#7F073F")
+      (cyberpunk-pink "#ff69b4")
+      (cyberpunk-pink-1 "#ff1493")
+      (cyberpunk-orange-2 "#FF6400")
+      (cyberpunk-orange-1 "#ff8c00") ;; DarkOrange
+      (cyberpunk-orange "#ffa500")
+      (cyberpunk-yellow "#ffff00")
+      (cyberpunk-yellow-1 "#FBDE2D")
+      (cyberpunk-yellow-2 "#d0bf8f")
+      (cyberpunk-yellow-3 "#D8FA3C")
+      (cyberpunk-yellow-3 "#E9C062")
+      (cyberpunk-green-2 "#006400")
+      (cyberpunk-green-1 "#2e8b57")
+      (cyberpunk-green "#00ff00")
+      (cyberpunk-green+1 "#61CE3C")
+      (cyberpunk-green+2 "#9fc59f")
+      (cyberpunk-green+3 "#afd8af")
+      (cyberpunk-green+4 "#bfebbf")
+      (cyberpunk-cyan "#93e0e3")
+      (cyberpunk-blue+1 "#94bff3")
+      (cyberpunk-blue "#0000ff")    ;; blue
+      (cyberpunk-blue-1 "#7b68ee")  ;; medium slate blue
+      (cyberpunk-blue-2 "#6a5acd")  ;; slate blue
+      (cyberpunk-blue-3 "#add8e6")  ;; light blue
+      (cyberpunk-blue-4 "#b2dfee")  ;; LightBlue2
+      (cyberpunk-blue-5 "#4c83ff")
+      (cyberpunk-blue-6 "#96CBFE")
+      (cyberpunk-magenta "#dc8cc3")
+      (cyberpunk-black "#000000")
+      (cyberpunk-black-2 "#0C1021")
+      (cyberpunk-black-3 "#0A0A0A")
+      (cyberpunk-gray "#d3d3d3")
+      (cyberpunk-gray-2 "#8B8989")
+      (cyberpunk-gray-3 "#919191")
+      (cyberpunk-gray-4 "#999999")
+      (cyberpunk-gray-5 "#333333")
+      (cyberpunk-gray-6 "#1A1A1A")
+      (cyberpunk-gray-7 "#4D4D4D")
+      (cyberpunk-white "#ffffff")
+      (cyberpunk-white-2 "#F8F8F8"))
 
- '(font-lock-builtin-face ((t (:foreground "#FF6400"))))
- '(font-lock-comment-face ((t (:italic t :foreground "#8B8989"))))
- '(font-lock-constant-face ((t (:foreground "#4c83ff"))))
- '(font-lock-doc-string-face ((t (:foreground "DarkOrange"))))
- '(font-lock-function-name-face ((t (:foreground "deep pink"))))
- '(font-lock-keyword-face ((t (:foreground "#FBDE2D"))))
- '(font-lock-preprocessor-face ((t (:foreground "gray57"))))
- '(font-lock-reference-face ((t (:foreground "medium slate blue"))))
- '(font-lock-reference-face ((t (:foreground "gray"))))
- '(font-lock-regexp-grouping-backslash ((t (:foreground "#E9C062"))))
- '(font-lock-regexp-grouping-construct ((t (:foreground "red"))))
- '(font-lock-string-face ((t (:foreground "#61CE3C"))))
- '(font-lock-type-face ((t (:foreground "#D8FA3C"))))
- '(font-lock-variable-name-face ((t (:foreground "#D8FA3C"))))
- '(font-lock-warning-face ((t (:bold t :foreground "Pink"))))
+ (custom-theme-set-faces
+   'cyberpunk
+   '(button ((t (:underline t))))
+   `(link ((,class (:foreground ,cyberpunk-yellow :underline t :weight bold))))
+   `(link-visited ((,class (:foreground ,cyberpunk-yellow-2 :underline t :weight normal))))
+   `(blue ((,class (:foreground ,cyberpunk-blue))))
+   `(bold ((,class (:bold t))))
+   `(bold-italic ((,class (:bold t))))
+   `(border-glyph ((,class (nil))))
+   `(buffers-tab ((,class (:background ,cyberpunk-black-2 :foreground ,cyberpunk-white-2))))
 
- '(gui-element ((t (:background "#333333" :foreground "#96CBFE"))))
- '(mode-line ((t (:background "gray10" :foreground "#4c83ff"
-                              :box (:line-width -1)))))
+   ;;; basic coloring
+   `(default ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-bg))))
+   `(cursor ((,class (:foreground ,cyberpunk-fg))))
+   `(escape-glyph-face ((,class (:foreground ,cyberpunk-red))))
+   ;; `(fringe ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-bg+1))))
+   `(header-line ((,class (:foreground ,cyberpunk-yellow
+                                       :background ,cyberpunk-bg-1
+                                       :box (:line-width -1 :style released-button)))))
+   `(highlight ((,class (:background ,cyberpunk-orange-1))))
 
- '(mode-line-inactive ((t (:background "gray10" :foreground "gray30"
-                                       :box (:line-width -1)))))
+   ;;; compilation
+   `(compilation-column-face ((,class (:foreground ,cyberpunk-yellow))))
+   `(compilation-enter-directory-face ((,class (:foreground ,cyberpunk-green))))
+   `(compilation-error-face ((,class (:foreground ,cyberpunk-red-1 :weight bold :underline t))))
+   `(compilation-face ((,class (:foreground ,cyberpunk-fg))))
+   `(compilation-info-face ((,class (:foreground ,cyberpunk-blue))))
+   `(compilation-info ((,class (:foreground ,cyberpunk-green+4 :underline t))))
+   `(compilation-leave-directory-face ((,class (:foreground ,cyberpunk-green))))
+   `(compilation-line-face ((,class (:foreground ,cyberpunk-yellow))))
+   `(compilation-line-number ((,class (:foreground ,cyberpunk-yellow))))
+   `(compilation-message-face ((,class (:foreground ,cyberpunk-blue))))
+   `(compilation-warning-face ((,class (:foreground ,cyberpunk-yellow-1 :weight bold :underline t))))
 
- '(isearch ((t (:background "deep pink" :foreground "black"))))
- '(isearch-fail ((t (:background "red4"))))
- '(lazy-highlight ((t (:background "yellow" :foreground "black"))))
- '(query-replace ((t (:background "#333333"))))
- '(Highline-face ((t (:background "SeaGreen"))))
- '(italic ((t (nil))))
- '(left-margin ((t (nil))))
- '(text-cursor ((t (:background "yellow" :foreground "black"))))
- '(toolbar ((t (nil))))
- '(underline ((nil (:underline nil))))
- '(vertical-border ((t (:background "black" :foreground "#333333"))))
- '(zmacs-region ((t (:background "snow" :foreground "ble"))))
+   ;;; grep
+   `(grep-context-face ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-pink-1))))
+   `(grep-error-face ((,class (:foreground ,cyberpunk-red :weight bold :underline t))))
+   `(grep-hit-face ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-red))))
+   `(grep-match-face ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-pink-1))))
+   `(match ((,class (:background ,cyberpunk-bg-1 :foreground ,cyberpunk-pink-1))))
 
- '(diff-added ((t (:foreground "green"))))
- '(diff-removed ((t (:foreground "red"))))
+   ;; faces used by isearch
+   `(isearch ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-pink-1))))
+   `(isearch-fail ((,class (:background ,cyberpunk-red-1))))
+   `(lazy-highlight ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-yellow))))
 
- '(magit-diff-add ((t (:foreground "green"))))
- '(magit-diff-del ((t (:foreground "red"))))
- '(magit-item-highlight ((t (:background "gray15"))))
- '(magit-section-title ((t (:foreground "deep pink"))))
- '(magit-diff-hunk-header ((t (:foreground "orange"))))
- '(magit-branch ((t (:foreground "gold"))))
+   `(left-margin ((,class (nil))))
+   `(toolbar ((,class (nil))))
+   `(underline ((,class (:underline nil))))
 
- '(eval-sexp-fu-flash ((t (:background "grey15" :foreground "DeepPink3"))))
+   `(menu ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-bg))))
+   `(minibuffer-prompt ((,class (:foreground ,cyberpunk-green+1 :background ,cyberpunk-black))))
+   `(mode-line
+     ((,class (:foreground ,cyberpunk-blue-5
+                           :background ,cyberpunk-gray-5
+                           :box (:line-width -1)))))
+   ;; `(mode-line-buffer-id ((,class (:foreground ,cyberpunk-yellow :weight bold))))
+   `(mode-line-inactive
+     ((,class (:foreground ,cyberpunk-gray-7
+                           :background ,cyberpunk-gray-6
+                           :box (:line-width -1)))))
+   `(region ((,class (:background ,cyberpunk-red-5))))
+   `(secondary-selection ((,class (:background ,cyberpunk-bg+2))))
+   `(trailing-whitespace ((,class (:background ,cyberpunk-red))))
+   `(vertical-border ((,class (:foreground ,cyberpunk-gray-5 :background ,cyberpunk-black))))
 
- '(ac-completion-face ((t (:foreground "darkgray" :underline t))))
- '(ac-candidate-face ((t (:background "gray60" :foreground "black"))))
- '(ac-selection-face ((t (:background "deep pink" :foreground "black"))))
- '(popup-isearch-match ((t (:background "black" :foreground "deep pink"))))
- '(popup-tip-face ((t (:background "#333333" :foreground "white"))))
- '(popup-scroll-bar-foreground-face ((t (:background "#0A0A0A"))))
- '(popup-scroll-bar-background-face ((t (:background "#333333"))))
+   ;;; font lock
+   `(font-lock-builtin-face ((,class (:foreground ,cyberpunk-orange-2))))
+   `(font-lock-comment-face ((,class (:foreground ,cyberpunk-gray-2 :italic t))))
+   ;; `(font-lock-comment-delimiter-face ((,class (:foreground ,cyberpunk-green)))) 
+   `(font-lock-constant-face ((,class (:foreground ,cyberpunk-blue-5))))
+   ;; `(font-lock-doc-face ((,class (:foreground ,cyberpunk-green+1))))
+   `(font-lock-doc-string-face ((,class (:foreground ,cyberpunk-orange-1))))
+   `(font-lock-function-name-face ((,class (:foreground ,cyberpunk-pink-1))))
+   `(font-lock-keyword-face ((,class (:foreground ,cyberpunk-yellow-1))))
+   ;; `(font-lock-negation-char-face ((,class (:foreground ,cyberpunk-fg))))
+   `(font-lock-preprocessor-face ((,class (:foreground ,cyberpunk-gray-3))))
+   `(font-lock-string-face ((,class (:foreground ,cyberpunk-green+1))))
+   `(font-lock-type-face ((,class (:foreground ,cyberpunk-yellow-3))))
+   `(font-lock-variable-name-face ((,class (:foreground ,cyberpunk-yellow-3))))
+   `(font-lock-warning-face ((,class (:foreground ,cyberpunk-pink))))
 
- '(window-number-face ((t (:background "grey10" :foreground "#4c83ff"))))
+   `(c-annotation-face ((,class (:inherit font-lock-constant-face))))
 
- '(yas/field-highlight-face ((t (:background "deep pink" :foreground "black"))))
+   `(gui-element ((,class (:background ,cyberpunk-gray-5 :foreground ,cyberpunk-blue-6))))
+   
 
- '(show-paren-match-face ((t (:background "deep pink" :foreground "black"))))
 
- '(naeu-green-face ((t (:foreground "green" :background "black"))))
- '(naeu-pink-face ((t (:foreground "deep pink" :background "black"))))
- '(naeu-blue-face ((t (:foreground "medium slate blue" :background "black"))))
- '(naeu-orange-face ((t (:foreground "#FBDE2D" :background "black"))))
- '(naeu-red-face ((t (:foreground "orange" :background "black"))))
- '(naeu-grey-face ((t (:foreground "gray30" :background "black"))))
+   ;;; newsticker
+   ;; These are currently placeholders that probably look terrible.
+   ;; Someone who uses newsticker is welcome to change these
+   `(newsticker-date-face ((,class (:foreground ,cyberpunk-fg))))
+   `(newsticker-default-face ((,class (:foreground ,cyberpunk-fg))))
+   `(newsticker-enclosure-face ((,class (:foreground ,cyberpunk-green+3))))
+   `(newsticker-extra-face ((,class (:foreground ,cyberpunk-bg+2 :height 0.8))))
+   `(newsticker-feed-face ((,class (:foreground ,cyberpunk-fg))))
+   `(newsticker-immortal-item-face ((,class (:foreground ,cyberpunk-green))))
+   `(newsticker-new-item-face ((,class (:foreground ,cyberpunk-blue))))
+   `(newsticker-obsolete-item-face ((,class (:foreground ,cyberpunk-red))))
+   `(newsticker-old-item-face ((,class (:foreground ,cyberpunk-bg+3))))
+   `(newsticker-statistics-face ((,class (:foreground ,cyberpunk-fg))))
+   `(newsticker-treeview-face ((,class (:foreground ,cyberpunk-fg))))
+   `(newsticker-treeview-immortal-face ((,class (:foreground ,cyberpunk-green))))
+   `(newsticker-treeview-listwindow-face ((,class (:foreground ,cyberpunk-fg))))
+   `(newsticker-treeview-new-face ((,class (:foreground ,cyberpunk-blue :weight bold))))
+   `(newsticker-treeview-obsolete-face ((,class (:foreground ,cyberpunk-red))))
+   `(newsticker-treeview-old-face ((,class (:foreground ,cyberpunk-bg+3))))
+   `(newsticker-treeview-selection-face ((,class (:foreground ,cyberpunk-yellow))))
 
- '(ido-first-match ((t (:foreground "deep pink" :background "black"))))
- '(ido-only-match ((t (:foreground "deep pink" :background "black"))))
- '(ido-subdir ((t (:foreground "gray60" :background "black"))))
- '(ido-indicator ((t (:foreground "black" :background "deep pink"))))
+   ;;; external
 
- '(match ((t (:foreground "deep pink" :background "blackn"))))
- '(minibuffer-prompt ((t (:foreground "#61CE3C" :background "black"))))
- '(grep-match-face ((t (:foreground "black" :background "deep pink"))))
- '(grep-hit-face ((t (:foreground "black" :background "red"))))
- '(grep-context-face ((t (:foreground "black" :background "deep pink"))))
+   ;; full-ack
+   `(ack-separator ((,class (:foreground ,cyberpunk-fg))))
+   `(ack-file ((,class (:foreground ,cyberpunk-blue))))
+   `(ack-line ((,class (:foreground ,cyberpunk-yellow))))
+   `(ack-match ((,class (:foreground ,cyberpunk-orange :background ,cyberpunk-bg-1 :weigth bold))))
 
- '(rainbow-delimiters-depth-1-face ((t (:foreground "dark red"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "dark green"))))
- '(rainbow-delimiters-depth-3-face ((t (:foreground "deep pink"))))
- '(rainbow-delimiters-depth-4-face ((t (:foreground "yellow"))))
- '(rainbow-delimiters-depth-5-face ((t (:foreground "green"))))
- '(rainbow-delimiters-depth-6-face ((t (:foreground "light blue"))))
- '(rainbow-delimiters-depth-7-face ((t (:foreground "orange"))))
- '(rainbow-delimiters-depth-8-face ((t (:foreground "slate blue"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "light gray"))))
- '(rainbow-delimiters-unmatched-face ((t (:foreground "white"))))
+   ;; auctex
+   `(font-latex-bold ((,class (:inherit bold))))
+   `(font-latex-warning ((,class (:inherit font-lock-warning))))
+   `(font-latex-sedate ((,class (:foreground ,cyberpunk-yellow :weight bold ))))
+   `(font-latex-title-4 ((,class (:inherit variable-pitch :weight bold))))
 
- '(erc-notice-face ((t (:bold t :foreground "grey26"))))
- '(erc-action-face ((t (:foreground "#FF6400"))))
- '(erc-bold-face ((t (:bold t :weight bold))))
- '(erc-button ((t (:bold t :weight bold))))
- '(erc-command-indicator-face ((t (:bold t :weight bold))))
- '(erc-current-nick-face ((t (:foreground "#FBDE2D"))))
- '(erc-dangerous-host-face ((t (:foreground "red"))))
- '(erc-default-face ((t (:foreground "#61CE3C"))))
- '(erc-direct-msg-face ((t (:foreground "orange"))))
- '(erc-error-face ((t (:foreground "red"))))
- '(erc-fool-face ((t (:foreground "dim gray"))))
- '(erc-header-line ((t (:background "grey90" :foreground "grey20"))))
- '(erc-input-face ((t (:foreground "#4c83ff"))))
- '(erc-inverse-face ((t (:background "Black" :foreground "White"))))
- '(erc-keyword-face ((t (:foreground "deep pink"))))
- '(erc-my-nick-face ((t (:bold t :foreground "deep pink" ))))
- '(erc-nick-default-face ((t (:foreground "grey57"))))
- '(erc-nick-msg-face ((t (:foreground "deep pink"))))
- '(erc-pal-face ((t (:bold t :foreground "Magenta" :weight bold))))
- '(erc-prompt-face ((t (:bold t :background "lightBlue2" :foreground "Black" :weight bold))))
- '(erc-timestamp-face ((t (:foreground "dim gray"))))
- '(erc-underline-face ((t (:underline t))))
+   ;; auto-complete
+   `(ac-completion-face ((,class (:background ,cyberpunk-gray-2 :underline t))))
+   `(ac-candidate-face ((,class (:background ,cyberpunk-gray-4 :foreground ,cyberpunk-black))))
+   `(ac-selection-face ((,class (:background ,cyberpunk-pink-1 :foreground ,cyberpunk-black))))
+   `(popup-tip-face ((,class (:background ,cyberpunk-gray-5 :foreground ,cyberpunk-white))))
+   `(popup-scroll-bar-foreground-face ((,class (:background ,cyberpunk-black-3))))
+   `(popup-scroll-bar-background-face ((,class (:background ,cyberpunk-bg-1))))
+   `(popup-isearch-match ((,class (:background ,cyberpunk-gray-5))))
 
- '(vhl/default-face ((t (:background "#333333"))))
- '(undo-tree-visualizer-active-branch-face ((t (:foreground "deep pink" :background "black"))))
- '(hl-sexp-face ((t (:background "#333333"))))
+   `(window-number-face ((,class (:background ,cyberpunk-gray-6 :foreground ,cyberpunk-blue-5))))
 
- '(hl-line ((t (:background "#333333"))))
+   ;; diff
+   `(diff-added ((,class (:foreground ,cyberpunk-green+4))))
+   `(diff-changed ((,class (:foreground ,cyberpunk-yellow))))
+   `(diff-removed ((,class (:foreground ,cyberpunk-red))))
+   `(diff-header ((,class (:background ,cyberpunk-bg+2))))
+   `(diff-file-header
+     ((,class (:background ,cyberpunk-bg+2 :foreground ,cyberpunk-fg :bold t))))
 
- '(mumamo-background-chunk-major ((((class color) (background dark)) (:background "black"))))
- '(mumamo-background-chunk-submode1 ((((class color) (background dark)) (:background "black"))))
+   ;; ert
+   `(ert-test-result-expected ((,class (:foreground ,cyberpunk-green+4 :background ,cyberpunk-bg))))
+   `(ert-test-result-unexpected ((,class (:foreground ,cyberpunk-red :background ,cyberpunk-bg))))
 
- '(ediff-even-diff-A ((((class color) (background dark)) (:background "dark green"))))
- '(ediff-odd-diff-A ((((class color) (background dark)) (:background "dark green"))))
- '(ediff-odd-diff-B ((((class color) (background dark)) (:background "dark red"))))
- '(ediff-even-diff-B ((((class color) (background dark)) (:background "dark red"))))
- '(ediff-current-diff-B ((((class color)) (:background "white"))))
- '(ediff-even-diff-A ((((class color)) nil)))
- '(ediff-even-diff-B ((((class color)) nil)))
- '(ediff-fine-diff-A ((((class color)) (:background "cyan"))))
- '(ediff-fine-diff-B ((((class color)) (:background "cyan"))))
- '(ediff-odd-diff-A ((((class color)) nil)))
- '(ediff-odd-diff-B ((((class color)) nil)))
+   ;; eshell
+   `(eshell-prompt ((,class (:foreground ,cyberpunk-yellow :weight bold))))
+   `(eshell-ls-archive ((,class (:foreground ,cyberpunk-red-1 :weight bold))))
+   `(eshell-ls-backup ((,class (:inherit font-lock-comment))))
+   `(eshell-ls-clutter ((,class (:inherit font-lock-comment))))
+   `(eshell-ls-directory ((,class (:foreground ,cyberpunk-blue+1 :weight bold))))
+   `(eshell-ls-executable ((,class (:foreground ,cyberpunk-red+1 :weight bold))))
+   `(eshell-ls-unreadable ((,class (:foreground ,cyberpunk-fg))))
+   `(eshell-ls-missing ((,class (:inherit font-lock-warning))))
+   `(eshell-ls-product ((,class (:inherit font-lock-doc))))
+   `(eshell-ls-special ((,class (:foreground ,cyberpunk-yellow :weight bold))))
+   `(eshell-ls-symlink ((,class (:foreground ,cyberpunk-cyan :weight bold))))
 
- ;; org-mode custom faces
- `(org-agenda-date-today
-   ((((class color)) (:foreground "#FF6400" :slant italic :weight bold))) t)
- `(org-agenda-structure
-   ((((class color)) (:inherit font-lock-comment-face))))
- `(org-checkbox ((((class color)) (:background "#8B8989" :foreground
-					       "black" :box
-					       (:line-width 1 :style released-button)))))
- `(org-column ((((class color)) (:background "#E9C062"
-					     :foreground "black"))))
-)
+   ;; flymake
+   `(flymake-errline ((,class (:foreground ,cyberpunk-red-1 :weight bold :underline t))))
+   `(flymake-warnline ((,class (:foreground ,cyberpunk-yellow-1 :weight bold :underline t))))
+
+   ;; flyspell
+   `(flyspell-duplicate ((,class (:foreground ,cyberpunk-yellow-1 :weight bold :underline t))))
+   `(flyspell-incorrect ((,class (:foreground ,cyberpunk-red-1 :weight bold :underline t))))
+
+   ;; erc
+   `(erc-action-face ((,class (:inherit erc-default-face))))
+   `(erc-bold-face ((,class (:weight bold))))
+   `(erc-current-nick-face ((,class (:foreground ,cyberpunk-blue :weight bold))))
+   `(erc-dangerous-host-face ((,class (:inherit font-lock-warning))))
+   `(erc-default-face ((,class (:foreground ,cyberpunk-fg))))
+   `(erc-direct-msg-face ((,class (:inherit erc-default))))
+   `(erc-error-face ((,class (:inherit font-lock-warning))))
+   `(erc-fool-face ((,class (:inherit erc-default))))
+   `(erc-highlight-face ((,class (:inherit hover-highlight))))
+   `(erc-input-face ((,class (:foreground ,cyberpunk-yellow))))
+   `(erc-keyword-face ((,class (:foreground ,cyberpunk-blue :weight bold))))
+   `(erc-nick-default-face ((,class (:foreground ,cyberpunk-yellow :weight bold))))
+   `(erc-my-nick-face ((,class (:foreground ,cyberpunk-red :weigth bold))))
+   `(erc-nick-msg-face ((,class (:inherit erc-default))))
+   `(erc-notice-face ((,class (:foreground ,cyberpunk-green))))
+   `(erc-pal-face ((,class (:foreground ,cyberpunk-orange :weight bold))))
+   `(erc-prompt-face ((,class (:foreground ,cyberpunk-orange :background ,cyberpunk-bg :weight bold))))
+   `(erc-timestamp-face ((,class (:foreground ,cyberpunk-green+1))))
+   `(erc-underline-face ((t (:underline t))))
+
+   ;; gnus
+   `(gnus-group-mail-1 ((,class (:bold t :inherit gnus-group-mail-1-empty))))
+   `(gnus-group-mail-1-empty ((,class (:inherit gnus-group-news-1-empty))))
+   `(gnus-group-mail-2 ((,class (:bold t :inherit gnus-group-mail-2-empty))))
+   `(gnus-group-mail-2-empty ((,class (:inherit gnus-group-news-2-empty))))
+   `(gnus-group-mail-3 ((,class (:bold t :inherit gnus-group-mail-3-empty))))
+   `(gnus-group-mail-3-empty ((,class (:inherit gnus-group-news-3-empty))))
+   `(gnus-group-mail-4 ((,class (:bold t :inherit gnus-group-mail-4-empty))))
+   `(gnus-group-mail-4-empty ((,class (:inherit gnus-group-news-4-empty))))
+   `(gnus-group-mail-5 ((,class (:bold t :inherit gnus-group-mail-5-empty))))
+   `(gnus-group-mail-5-empty ((,class (:inherit gnus-group-news-5-empty))))
+   `(gnus-group-mail-6 ((,class (:bold t :inherit gnus-group-mail-6-empty))))
+   `(gnus-group-mail-6-empty ((,class (:inherit gnus-group-news-6-empty))))
+   `(gnus-group-mail-low ((,class (:bold t :inherit gnus-group-mail-low-empty))))
+   `(gnus-group-mail-low-empty ((,class (:inherit gnus-group-news-low-empty))))
+   `(gnus-group-news-1 ((,class (:bold t :inherit gnus-group-news-1-empty))))
+   `(gnus-group-news-2 ((,class (:bold t :inherit gnus-group-news-2-empty))))
+   `(gnus-group-news-3 ((,class (:bold t :inherit gnus-group-news-3-empty))))
+   `(gnus-group-news-4 ((,class (:bold t :inherit gnus-group-news-4-empty))))
+   `(gnus-group-news-5 ((,class (:bold t :inherit gnus-group-news-5-empty))))
+   `(gnus-group-news-6 ((,class (:bold t :inherit gnus-group-news-6-empty))))
+   `(gnus-group-news-low ((,class (:bold t :inherit gnus-group-news-low-empty))))
+   `(gnus-header-content ((,class (:inherit message-header-other))))
+   `(gnus-header-from ((,class (:inherit message-header-from))))
+   `(gnus-header-name ((,class (:inherit message-header-name))))
+   `(gnus-header-newsgroups ((,class (:inherit message-header-other))))
+   `(gnus-header-subject ((,class (:inherit message-header-subject))))
+   `(gnus-summary-cancelled ((,class (:foreground ,cyberpunk-orange))))
+   `(gnus-summary-high-ancient ((,class (:foreground ,cyberpunk-blue))))
+   `(gnus-summary-high-read ((,class (:foreground ,cyberpunk-green :weight bold))))
+   `(gnus-summary-high-ticked ((,class (:foreground ,cyberpunk-orange :weight bold))))
+   `(gnus-summary-high-unread ((,class (:foreground ,cyberpunk-fg :weight bold))))
+   `(gnus-summary-low-ancient ((,class (:foreground ,cyberpunk-blue))))
+   `(gnus-summary-low-read ((t (:foreground ,cyberpunk-green))))
+   `(gnus-summary-low-ticked ((,class (:foreground ,cyberpunk-orange :weight bold))))
+   `(gnus-summary-low-unread ((,class (:foreground ,cyberpunk-fg))))
+   `(gnus-summary-normal-ancient ((,class (:foreground ,cyberpunk-blue))))
+   `(gnus-summary-normal-read ((,class (:foreground ,cyberpunk-green))))
+   `(gnus-summary-normal-ticked ((,class (:foreground ,cyberpunk-orange :weight bold))))
+   `(gnus-summary-normal-unread ((,class (:foreground ,cyberpunk-fg))))
+   `(gnus-summary-selected ((,class (:foreground ,cyberpunk-yellow :weight bold))))
+   `(gnus-cite-1 ((,class (:foreground ,cyberpunk-blue))))
+   `(gnus-cite-10 ((,class (:foreground ,cyberpunk-yellow-1))))
+   `(gnus-cite-11 ((,class (:foreground ,cyberpunk-yellow))))
+   `(gnus-cite-2 ((,class (:foreground ,cyberpunk-blue-1))))
+   `(gnus-cite-3 ((,class (:foreground ,cyberpunk-blue-2))))
+   `(gnus-cite-4 ((,class (:foreground ,cyberpunk-green+2))))
+   `(gnus-cite-5 ((,class (:foreground ,cyberpunk-green+1))))
+   `(gnus-cite-6 ((,class (:foreground ,cyberpunk-green))))
+   `(gnus-cite-7 ((,class (:foreground ,cyberpunk-red))))
+   `(gnus-cite-8 ((,class (:foreground ,cyberpunk-red-1))))
+   `(gnus-cite-9 ((,class (:foreground ,cyberpunk-red-2))))
+   `(gnus-group-news-1-empty ((,class (:foreground ,cyberpunk-yellow))))
+   `(gnus-group-news-2-empty ((,class (:foreground ,cyberpunk-green+3))))
+   `(gnus-group-news-3-empty ((,class (:foreground ,cyberpunk-green+1))))
+   `(gnus-group-news-4-empty ((,class (:foreground ,cyberpunk-blue-2))))
+   `(gnus-group-news-5-empty ((,class (:foreground ,cyberpunk-blue-3))))
+   `(gnus-group-news-6-empty ((,class (:foreground ,cyberpunk-bg+2))))
+   `(gnus-group-news-low-empty ((,class (:foreground ,cyberpunk-bg+2))))
+   `(gnus-signature ((,class (:foreground ,cyberpunk-yellow))))
+   `(gnus-x ((,class (:background ,cyberpunk-fg :foreground ,cyberpunk-bg))))
+
+   ;; helm
+   `(helm-header
+     ((,class (:foreground ,cyberpunk-green
+                           :background ,cyberpunk-bg
+                           :underline nil
+                           :box nil))))
+   `(helm-source-header
+     ((,class (:foreground ,cyberpunk-yellow
+                           :background ,cyberpunk-bg-1
+                           :underline nil
+                           :weight bold
+                           :box (:line-width -1 :style released-button)))))
+   `(helm-selection ((,class (:background ,cyberpunk-bg+1 :underline nil))))
+   `(helm-selection-line ((,class (:background ,cyberpunk-bg+1))))
+   `(helm-visible-mark ((,class (:foreground ,cyberpunk-bg :background ,cyberpunk-yellow-2))))
+   `(helm-candidate-number ((,class (:foreground ,cyberpunk-green+4 :background ,cyberpunk-bg-1))))
+
+   ;; hl-line-mode
+   `(hl-line-face ((,class (:background ,cyberpunk-gray-5))))
+
+   ;; ido-mode
+   `(ido-first-match ((,class (:foreground ,cyberpunk-pink-1 :background ,cyberpunk-black))))
+   `(ido-only-match ((,class (:foreground ,cyberpunk-pink-1 :background ,cyberpunk-black))))
+   `(ido-subdir ((,class (:foreground ,cyberpunk-yellow))))
+   `(ido-indicator ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-pink-1))))
+   ;; js2-mode
+   `(js2-warning-face ((,class (:underline ,cyberpunk-orange))))
+   `(js2-error-face ((,class (:foreground ,cyberpunk-red :weight bold))))
+   `(js2-jsdoc-tag-face ((,class (:foreground ,cyberpunk-green-1))))
+   `(js2-jsdoc-type-face ((,class (:foreground ,cyberpunk-green+2))))
+   `(js2-jsdoc-value-face ((,class (:foreground ,cyberpunk-green+3))))
+   `(js2-function-param-face ((,class (:foreground, cyberpunk-green+3))))
+   `(js2-external-variable-face ((,class (:foreground ,cyberpunk-orange))))
+
+   ;; jabber-mode
+   `(jabber-roster-user-away ((,class (:foreground ,cyberpunk-green+2))))
+   `(jabber-roster-user-online ((,class (:foreground ,cyberpunk-blue-1))))
+   `(jabber-roster-user-dnd ((,class (:foreground ,cyberpunk-red+1))))
+   `(jabber-rare-time-face ((,class (:foreground ,cyberpunk-green+1))))
+   `(jabber-chat-prompt-local ((,class (:foreground ,cyberpunk-blue-1))))
+   `(jabber-chat-prompt-foreign ((,class (:foreground ,cyberpunk-red+1))))
+   `(jabber-activity-face((,class (:foreground ,cyberpunk-red+1))))
+   `(jabber-activity-personal-face ((,class (:foreground ,cyberpunk-blue+1))))
+   `(jabber-title-small ((,class (:height 1.1 :weight bold))))
+   `(jabber-title-medium ((,class (:height 1.2 :weight bold))))
+   `(jabber-title-large ((,class (:height 1.3 :weight bold))))
+
+   ;; linum-mode
+   `(linum ((,class (:foreground ,cyberpunk-green+2 :background ,cyberpunk-bg))))
+
+   ;; magit
+   `(magit-section-title ((,class (:foreground ,cyberpunk-pink-1 :weight bold))))
+   `(magit-branch ((,class (:foreground ,cyberpunk-orange :weight bold))))
+   `(magit-item-highlight ((,class (:background ,cyberpunk-bg+1))))
+
+   ;; message-mode
+   `(message-cited-text ((,class (:inherit font-lock-comment))))
+   `(message-header-name ((,class (:foreground ,cyberpunk-green+1))))
+   `(message-header-other ((,class (:foreground ,cyberpunk-green))))
+   `(message-header-to ((,class (:foreground ,cyberpunk-yellow :weight bold))))
+   `(message-header-from ((,class (:foreground ,cyberpunk-yellow :weight bold))))
+   `(message-header-cc ((,class (:foreground ,cyberpunk-yellow :weight bold))))
+   `(message-header-newsgroups ((,class (:foreground ,cyberpunk-yellow :weight bold))))
+   `(message-header-subject ((,class (:foreground ,cyberpunk-orange :weight bold))))
+   `(message-header-xheader ((,class (:foreground ,cyberpunk-green))))
+   `(message-mml ((,class (:foreground ,cyberpunk-yellow :weight bold))))
+   `(message-separator ((,class (:inherit font-lock-comment))))
+
+   ;; mew
+   `(mew-face-header-subject ((,class (:foreground ,cyberpunk-orange))))
+   `(mew-face-header-from ((,class (:foreground ,cyberpunk-yellow))))
+   `(mew-face-header-date ((,class (:foreground ,cyberpunk-green))))
+   `(mew-face-header-to ((,class (:foreground ,cyberpunk-red))))
+   `(mew-face-header-key ((,class (:foreground ,cyberpunk-green))))
+   `(mew-face-header-private ((,class (:foreground ,cyberpunk-green))))
+   `(mew-face-header-important ((,class (:foreground ,cyberpunk-blue))))
+   `(mew-face-header-marginal ((,class (:foreground ,cyberpunk-fg :weight bold))))
+   `(mew-face-header-warning ((,class (:foreground ,cyberpunk-red))))
+   `(mew-face-header-xmew ((,class (:foreground ,cyberpunk-green))))
+   `(mew-face-header-xmew-bad ((,class (:foreground ,cyberpunk-red))))
+   `(mew-face-body-url ((,class (:foreground ,cyberpunk-orange))))
+   `(mew-face-body-comment ((,class (:foreground ,cyberpunk-fg :slant italic))))
+   `(mew-face-body-cite1 ((,class (:foreground ,cyberpunk-green))))
+   `(mew-face-body-cite2 ((,class (:foreground ,cyberpunk-blue))))
+   `(mew-face-body-cite3 ((,class (:foreground ,cyberpunk-orange))))
+   `(mew-face-body-cite4 ((,class (:foreground ,cyberpunk-yellow))))
+   `(mew-face-body-cite5 ((,class (:foreground ,cyberpunk-red))))
+   `(mew-face-mark-review ((,class (:foreground ,cyberpunk-blue))))
+   `(mew-face-mark-escape ((,class (:foreground ,cyberpunk-green))))
+   `(mew-face-mark-delete ((,class (:foreground ,cyberpunk-red))))
+   `(mew-face-mark-unlink ((,class (:foreground ,cyberpunk-yellow))))
+   `(mew-face-mark-refile ((,class (:foreground ,cyberpunk-green))))
+   `(mew-face-mark-unread ((,class (:foreground ,cyberpunk-red-2))))
+   `(mew-face-eof-message ((,class (:foreground ,cyberpunk-green))))
+   `(mew-face-eof-part ((,class (:foreground ,cyberpunk-yellow))))
+
+   ;; mic-paren
+   `(paren-face-match ((,class (:foreground ,cyberpunk-cyan :background ,cyberpunk-bg :weight bold))))
+   `(paren-face-mismatch ((,class (:foreground ,cyberpunk-bg :background ,cyberpunk-magenta :weight bold))))
+   `(paren-face-no-match ((,class (:foreground ,cyberpunk-bg :background ,cyberpunk-red :weight bold))))
+
+   ;; nav
+   `(nav-face-heading ((,class (:foreground ,cyberpunk-yellow))))
+   `(nav-face-button-num ((,class (:foreground ,cyberpunk-cyan))))
+   `(nav-face-dir ((,class (:foreground ,cyberpunk-green))))
+   `(nav-face-hdir ((,class (:foreground ,cyberpunk-red))))
+   `(nav-face-file ((,class (:foreground ,cyberpunk-fg))))
+   `(nav-face-hfile ((,class (:foreground ,cyberpunk-red-4))))
+
+   ;; mumamo
+   `(mumamo-background-chunk-major ((,class (:background ,cyberpunk-black))))
+   `(mumamo-background-chunk-submode1 ((,class (:background ,cyberpunk-bg-1))))
+   `(mumamo-background-chunk-submode2 ((,class (:background ,cyberpunk-bg+2))))
+   `(mumamo-background-chunk-submode3 ((,class (:background ,cyberpunk-bg+3))))
+   `(mumamo-background-chunk-submode4 ((,class (:background ,cyberpunk-bg+1))))
+
+   ;; org-mode
+   `(org-agenda-date-today
+     ((,class (:foreground ,cyberpunk-orange-2 :slant italic :weight bold))) t)
+   `(org-agenda-structure
+     ((,class (:inherit font-lock-comment-face))))
+   ;; `(org-archived ((,class (:foreground ,cyberpunk-fg :weight bold))))
+   `(org-checkbox ((,class (:background ,cyberpunk-gray-2 :foreground ,cyberpunk-black
+                                   :box (:line-width 1 :style released-button)))))
+   ;; `(org-date ((,class (:foreground ,cyberpunk-blue :underline t))))
+   ;; `(org-deadline-announce ((,class (:foreground ,cyberpunk-red-1))))
+   ;; `(org-done ((,class (:bold t :weight bold :foreground ,cyberpunk-green+3))))
+   ;; `(org-formula ((,class (:foreground ,cyberpunk-yellow-2))))
+   ;; `(org-headline-done ((,class (:foreground ,cyberpunk-green+3))))
+   ;; `(org-hide ((,class (:foreground ,cyberpunk-bg-1))))
+   `(org-level-1 ((,class (:foreground ,cyberpunk-pink-1))))
+   `(org-level-2 ((,class (:foreground ,cyberpunk-yellow))))
+   `(org-level-3 ((,class (:foreground ,cyberpunk-orange))))
+   `(org-level-4 ((,class (:foreground ,cyberpunk-green))))
+   `(org-level-5 ((,class (:foreground ,cyberpunk-blue-5))))
+   `(org-level-6 ((,class (:foreground ,cyberpunk-pink))))
+   `(org-level-7 ((,class (:foreground ,cyberpunk-red))))
+   `(org-level-8 ((,class (:foreground ,cyberpunk-blue))))
+   ;; `(org-link ((,class (:foreground ,cyberpunk-yellow-2 :underline t))))
+   ;; `(org-scheduled ((,class (:foreground ,cyberpunk-green+4))))
+   ;; `(org-scheduled-previously ((,class (:foreground ,cyberpunk-red-4))))
+   ;; `(org-scheduled-today ((,class (:foreground ,cyberpunk-blue+1))))
+   ;; `(org-special-keyword ((,class (:foreground ,cyberpunk-yellow-1))))
+   ;; `(org-table ((,class (:foreground ,cyberpunk-green+2))))
+   ;; `(org-tag ((,class (:bold t :weight bold))))
+   ;; `(org-time-grid ((,class (:foreground ,cyberpunk-orange))))
+   ;; `(org-todo ((,class (:bold t :foreground ,cyberpunk-red :weight bold))))
+   ;; `(org-upcoming-deadline ((,class (:inherit font-lock-keyword-face))))
+   ;; `(org-warning ((,class (:bold t :foreground ,cyberpunk-red :weight bold :underline nil))))
+   `(org-column ((,class (:background ,cyberpunk-yellow-3 :foreground ,cyberpunk-black))))
+   `(org-column-title ((,class (:background ,cyberpunk-bg-1 :underline t :weight bold))))
+
+   ;; outline
+   `(outline-8 ((,class (:inherit default))))
+   `(outline-7 ((,class (:inherit outline-8 :height 1.0))))
+   `(outline-6 ((,class (:inherit outline-7 :height 1.0))))
+   `(outline-5 ((,class (:inherit outline-6 :height 1.0))))
+   `(outline-4 ((,class (:inherit outline-5 :height 1.0))))
+   `(outline-3 ((,class (:inherit outline-4 :height 1.0))))
+   `(outline-2 ((,class (:inherit outline-3 :height 1.0))))
+   `(outline-1 ((,class (:inherit outline-2 :height 1.0))))
+
+   ;; rainbow-delimiters
+   `(rainbow-delimiters-depth-1-face ((,class (:foreground ,cyberpunk-red-1))))
+   `(rainbow-delimiters-depth-2-face ((,class (:foreground ,cyberpunk-green-2))))
+   `(rainbow-delimiters-depth-3-face ((,class (:foreground ,cyberpunk-pink-1))))
+   `(rainbow-delimiters-depth-4-face ((,class (:foreground ,cyberpunk-yellow))))
+   `(rainbow-delimiters-depth-5-face ((,class (:foreground ,cyberpunk-green))))
+   `(rainbow-delimiters-depth-6-face ((,class (:foreground ,cyberpunk-blue-3))))
+   `(rainbow-delimiters-depth-7-face ((,class (:foreground ,cyberpunk-orange))))
+   `(rainbow-delimiters-depth-8-face ((,class (:foreground ,cyberpunk-blue-2))))
+   `(rainbow-delimiters-depth-9-face ((,class (:foreground ,cyberpunk-gray))))
+   `(rainbow-delimiters-depth-10-face ((,class (:foreground ,cyberpunk-white))))
+   `(rainbow-delimiters-depth-11-face ((,class (:foreground ,cyberpunk-blue+1))))
+   `(rainbow-delimiters-depth-12-face ((,class (:foreground ,cyberpunk-red-4))))
+
+   ;; rpm-mode
+   `(rpm-spec-dir-face ((,class (:foreground ,cyberpunk-green))))
+   `(rpm-spec-doc-face ((,class (:foreground ,cyberpunk-green))))
+   `(rpm-spec-ghost-face ((,class (:foreground ,cyberpunk-red))))
+   `(rpm-spec-macro-face ((,class (:foreground ,cyberpunk-yellow))))
+   `(rpm-spec-obsolete-tag-face ((,class (:foreground ,cyberpunk-red))))
+   `(rpm-spec-package-face ((,class (:foreground ,cyberpunk-red))))
+   `(rpm-spec-section-face ((,class (:foreground ,cyberpunk-yellow))))
+   `(rpm-spec-tag-face ((,class (:foreground ,cyberpunk-blue))))
+   `(rpm-spec-var-face ((,class (:foreground ,cyberpunk-red))))
+
+   ;; rst-mode
+   `(rst-level-1-face ((,class (:foreground ,cyberpunk-orange))))
+   `(rst-level-2-face ((,class (:foreground ,cyberpunk-green+1))))
+   `(rst-level-3-face ((,class (:foreground ,cyberpunk-blue-1))))
+   `(rst-level-4-face ((,class (:foreground ,cyberpunk-yellow-2))))
+   `(rst-level-5-face ((,class (:foreground ,cyberpunk-cyan))))
+   `(rst-level-6-face ((,class (:foreground ,cyberpunk-green-1))))
+
+   ;; show-paren
+   `(show-paren-mismatch ((,class (:foreground ,cyberpunk-red-3 :background ,cyberpunk-bg :weight bold))))
+   `(show-paren-match ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-pink-1 :weight bold))))
+
+   ;; SLIME
+   `(slime-repl-inputed-output-face ((,class (:foreground ,cyberpunk-red))))
+
+   ;; volatile-highlights
+   `(vhl/default-face ((,class (:background ,cyberpunk-gray-5))))
+
+   `(undo-tree-visualizer-active-branch-face ((,class (:foreground ,cyberpunk-pink-1 :background ,cyberpunk-black))))
+
+   ;; whitespace-mode
+   `(whitespace-space ((,class (:background ,cyberpunk-bg :foreground ,cyberpunk-bg+1))))
+   `(whitespace-hspace ((,class (:background ,cyberpunk-bg :foreground ,cyberpunk-bg+1))))
+   `(whitespace-tab ((,class (:background ,cyberpunk-bg :foreground ,cyberpunk-red))))
+   `(whitespace-newline ((,class (:foreground ,cyberpunk-bg+1))))
+   `(whitespace-trailing ((,class (:foreground ,cyberpunk-red :background ,cyberpunk-bg))))
+   `(whitespace-line ((,class (:background ,cyberpunk-bg-05 :foreground ,cyberpunk-magenta))))
+   `(whitespace-space-before-tab ((,class (:background ,cyberpunk-orange :foreground ,cyberpunk-orange))))
+   `(whitespace-indentation ((,class (:background ,cyberpunk-yellow :foreground ,cyberpunk-red))))
+   `(whitespace-empty ((,class (:background ,cyberpunk-yellow :foreground ,cyberpunk-red))))
+   `(whitespace-space-after-tab ((,class (:background ,cyberpunk-yellow :foreground ,cyberpunk-red))))
+
+   ;; wanderlust
+   `(wl-highlight-folder-few-face ((,class (:foreground ,cyberpunk-red-2))))
+   `(wl-highlight-folder-many-face ((,class (:foreground ,cyberpunk-red-1))))
+   `(wl-highlight-folder-path-face ((,class (:foreground ,cyberpunk-orange))))
+   `(wl-highlight-folder-unread-face ((,class (:foreground ,cyberpunk-blue))))
+   `(wl-highlight-folder-zero-face ((,class (:foreground ,cyberpunk-fg))))
+   `(wl-highlight-folder-unknown-face ((,class (:foreground ,cyberpunk-blue))))
+   `(wl-highlight-message-citation-header ((,class (:foreground ,cyberpunk-red-1))))
+   `(wl-highlight-message-cited-text-1 ((,class (:foreground ,cyberpunk-red))))
+   `(wl-highlight-message-cited-text-2 ((,class (:foreground ,cyberpunk-green+2))))
+   `(wl-highlight-message-cited-text-3 ((,class (:foreground ,cyberpunk-blue))))
+   `(wl-highlight-message-cited-text-4 ((,class (:foreground ,cyberpunk-blue+1))))
+   `(wl-highlight-message-header-contents-face ((,class (:foreground ,cyberpunk-green))))
+   `(wl-highlight-message-headers-face ((,class (:foreground ,cyberpunk-red+1))))
+   `(wl-highlight-message-important-header-contents ((,class (:foreground ,cyberpunk-green+2))))
+   `(wl-highlight-message-header-contents ((,class (:foreground ,cyberpunk-green+1))))
+   `(wl-highlight-message-important-header-contents2 ((,class (:foreground ,cyberpunk-green+2))))
+   `(wl-highlight-message-signature ((,class (:foreground ,cyberpunk-green))))
+   `(wl-highlight-message-unimportant-header-contents ((,class (:foreground ,cyberpunk-fg))))
+   `(wl-highlight-summary-answered-face ((,class (:foreground ,cyberpunk-blue))))
+   `(wl-highlight-summary-disposed-face ((,class (:foreground ,cyberpunk-fg
+                                                         :slant italic))))
+   `(wl-highlight-summary-new-face ((,class (:foreground ,cyberpunk-blue))))
+   `(wl-highlight-summary-normal-face ((,class (:foreground ,cyberpunk-fg))))
+   `(wl-highlight-summary-thread-top-face ((,class (:foreground ,cyberpunk-yellow))))
+   `(wl-highlight-thread-indent-face ((,class (:foreground ,cyberpunk-magenta))))
+   `(wl-highlight-summary-refiled-face ((,class (:foreground ,cyberpunk-fg))))
+   `(wl-highlight-summary-displaying-face ((,class (:underline t :weight bold))))
+
+   ;; which-func-mode
+   `(which-func ((,class (:foreground ,cyberpunk-green+4))))
+
+   ;; yasnippet
+   `(yas/field-highlight-face ((,class (:background ,cyberpunk-pink-1 :foreground ,cyberpunk-black))))
+
+   ;; yascroll
+   `(yascroll:thumb-text-area ((,class (:background ,cyberpunk-bg-1))))
+   `(yascroll:thumb-fringe ((,class (:background ,cyberpunk-bg-1 :foreground ,cyberpunk-bg-1))))
+   )
+
+  ;;; custom theme variables
+  (custom-theme-set-variables
+   'cyberpunk
+   `(ansi-color-names-vector [,cyberpunk-bg ,cyberpunk-red ,cyberpunk-green ,cyberpunk-yellow
+                                          ,cyberpunk-blue ,cyberpunk-magenta ,cyberpunk-cyan ,cyberpunk-fg])
+
+   ;; fill-column-indicator
+   `(fci-rule-color ,cyberpunk-bg-05))
+
+  ;;; colors for the ansi-term
+  (eval-after-load 'term
+    `(setq ansi-term-color-vector
+         (vector 'unspecified ,cyberpunk-bg ,cyberpunk-red ,cyberpunk-green ,cyberpunk-yellow
+		   ,cyberpunk-blue ,cyberpunk-magenta ,cyberpunk-cyan ,cyberpunk-fg))))
+
+;;;###autoload
+(when load-file-name
+  (add-to-list 'custom-theme-load-path
+               (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'cyberpunk)
+
+;; Local Variables:
+;; no-byte-compile: t
+;; indent-tabs-mode: nil
+;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
+;; End:
+
+;;; cyberpunk-theme.el ends here.
