@@ -1,7 +1,7 @@
 Cyberpunk Theme
 ===============
 
-Cyberpunk color theme for the emacs 24+ built-in color theme support known loosely as <code>deftheme</code>. The theme is <i>mostly</i> a direct port of the [overtone/emacs-live](https://github.com/overtone/emacs-live) (designed originally for the <code>color-theme</code> package). Many mode-specific customizations, listed below, have also been added.
+Cyberpunk color theme for the emacs 24+ built-in color theme support known loosely as <code>deftheme</code>. The theme is <i>mostly</i> a direct port of the [overtone/emacs-live](https://github.com/overtone/emacs-live) theme of the same name (designed originally for the <code>color-theme</code> package). Many mode-specific customizations, listed below, have also been added.
 
 Installation
 ============
