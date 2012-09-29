@@ -32,7 +32,6 @@
 (let ((class '((class color) (min-colors 89)))
       ;; Cyberpunk palette
       (cyberpunk-fg "#dcdccc")
-      (cyberpunk-fg-1 "#656555")
       (cyberpunk-bg-1 "#2b2b2b")
       (cyberpunk-bg-05 "#383838")
       (cyberpunk-bg "#000000")
