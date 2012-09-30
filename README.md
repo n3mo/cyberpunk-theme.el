@@ -6,13 +6,34 @@ Cyberpunk color theme for the emacs 24+ built-in color theme support known loose
 Installation
 ============
 
+Manual
+------
+
 Ensure that cyberpunk-theme.el is on the custom-theme-load-path like this: 
 
 ```lisp
 (add-to-list 'custom-theme-load-path "~/path/to/cyberpunk-theme.el")
 ```
 
-You can then load the theme at any time by running the command <code>M-x load-theme</code> and entering cyberpunk when prompted for "load custom theme: "
+You can then load the theme at any time by running the command <code>M-x load-theme RET cyberpunk</code>.
+
+Package.el
+----------
+
+Cyberpunk is available in [MELPA](http://melpa.milkbox.net/). This installation method assumes that you have added MELP to your package archive list. This can be accomplished in your init file with the following command:
+
+```lisp
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+```
+
+Once set up, you can install <code>cyberpunk</code> using the following command:
+
+<pre>
+M-x package-install cyberpunk-theme
+</pre>
+
+or, by alternatively running the command <code>list-packages</code>, marking the cyberpunk-theme package with the command "i" and running the execute execute command "x".
 
 If you want cyberpunk-theme to be set at startup, add the following line to your .emacs init file:
 
