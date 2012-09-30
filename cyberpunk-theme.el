@@ -1,9 +1,10 @@
-;;; Cyberpunk Colour Theme
+;;; cyberpunk-theme.el --- Cyberpunk Color Theme
 
 ;; Copyright 2012, Nick Van Horn
 
 ;; Author: Nick Van Horn <nemo1211@gmail.com>
 ;; Keywords: color theme cyberpunk
+;; Version: 1.0
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,6 +21,9 @@
 ;; the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 ;; Boston, MA 02111-1307, USA.
 ;;
+
+;;; Commentary:
+
 ;; This theme is a port of the overtone/emacs-live theme of the same name
 ;; (https://github.com/overtone/emacs-live). The original theme was
 ;; designed for use with the color-theme package. This theme adopts the
