@@ -224,6 +224,8 @@
    `(font-latex-warning ((,class (:inherit font-lock-warning))))
    `(font-latex-sedate ((,class (:foreground ,cyberpunk-yellow :weight bold ))))
    `(font-latex-title-4 ((,class (:inherit variable-pitch :weight bold))))
+   `(font-latex-sectioning-0 ((,class (:foreground ,cyberpunk-blue :background ,cyberpunk-black :scale 1.5))))
+   `(font-latex-sectioning-1 ((,class (:foreground ,cyberpunk-blue :background ,cyberpunk-black :scale 1.5))))
 
    ;; auto-complete
    `(ac-completion-face ((,class (:background ,cyberpunk-gray-2 :underline t))))
@@ -266,7 +268,7 @@
 
    ;; flyspell
    `(flyspell-duplicate ((,class (:foreground ,cyberpunk-yellow-1 :weight bold :underline t))))
-   `(flyspell-incorrect ((,class (:foreground ,cyberpunk-red-1 :weight bold :underline t))))
+   `(flyspell-incorrect ((,class (:foreground ,cyberpunk-red-4 :weight bold :underline t))))
 
    ;; erc
    `(erc-action-face ((,class (:inherit erc-default-face))))
@@ -490,7 +492,7 @@
                               :box (:line-width 1 :style none)))))
    `(org-todo ((,class (:bold t :foreground ,cyberpunk-orange :weight bold
                               :box (:line-width 1 :style none)))))
-   `(org-level-1 ((,class (:foreground ,cyberpunk-pink-1))))
+   `(org-level-1 ((,class (:foreground ,cyberpunk-pink-1 :height 1.2))))
    `(org-level-2 ((,class (:foreground ,cyberpunk-yellow))))
    `(org-level-3 ((,class (:foreground ,cyberpunk-blue-5))))
    `(org-level-4 ((,class (:foreground ,cyberpunk-green))))
