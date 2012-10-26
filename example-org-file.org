@@ -1,0 +1,37 @@
+#+TITLE:     Emacs Cyberpunk Theme Org Demo
+#+AUTHOR:    Your Name Here!
+#+DATE:      2012-09-30 Sun
+#+DESCRIPTION: org mode with cyberpunk theme
+#+KEYWORDS: cyberpunk color theme
+
+* Header Level 1 (Large Font)
+
+** Header Level 2    (Medium Font)
+
+*** Header Level 3   (Smaller Font)
+
+**** Header Level 4     (Smallest Font)
+
+***** Header Level 5
+
+****** Header Level 6
+
+******* Header Level 7
+
+******** Header Level 8
+
+* TODO Tasks to be completed					       :work:
+:PROPERTIES:
+:Title:       My title here
+:DESCRIPTION: There's work to be done!
+:END:
+
+- [ ] Uncompleted item: [[https://github.com/n3mo][Github Weblink]]
+- [ ] Uncompleted item
+
+* DONE Completed tasks						   :noexport:
+
++ [X] Completed item <2012-09-28 Fri>
++ [X] Completed item <2012-09-24 Mon>
+
+
