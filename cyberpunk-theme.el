@@ -333,7 +333,7 @@
    `(gnus-summary-normal-ticked ((,class (:foreground ,cyberpunk-orange :weight bold))))
    `(gnus-summary-normal-unread ((,class (:foreground ,cyberpunk-fg))))
    `(gnus-summary-selected ((,class (:foreground ,cyberpunk-yellow :weight bold))))
-   `(gnus-cite-1 ((,class (:foreground ,cyberpunk-blue))))
+   `(gnus-cite-1 ((,class (:foreground ,cyberpunk-yellow-2))))
    `(gnus-cite-10 ((,class (:foreground ,cyberpunk-yellow-1))))
    `(gnus-cite-11 ((,class (:foreground ,cyberpunk-yellow))))
    `(gnus-cite-2 ((,class (:foreground ,cyberpunk-blue-1))))
