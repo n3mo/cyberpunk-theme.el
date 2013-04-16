@@ -1,8 +1,8 @@
 ;;; cyberpunk-theme.el --- Cyberpunk Color Theme
 
-;; Copyright 2012, Nick Van Horn
+;; Copyright 2012, Nicholas M. Van Horn
 
-;; Author: Nick Van Horn <nemo1211@gmail.com>
+;; Author: Nicholas M. Van Horn <vanhorn.nm@gmail.com>
 ;; Keywords: color theme cyberpunk
 ;; Version: 1.1
 
@@ -333,7 +333,7 @@
    `(gnus-summary-normal-ticked ((,class (:foreground ,cyberpunk-orange :weight bold))))
    `(gnus-summary-normal-unread ((,class (:foreground ,cyberpunk-fg))))
    `(gnus-summary-selected ((,class (:foreground ,cyberpunk-yellow :weight bold))))
-   `(gnus-cite-1 ((,class (:foreground ,cyberpunk-blue))))
+   `(gnus-cite-1 ((,class (:foreground ,cyberpunk-yellow-2))))
    `(gnus-cite-10 ((,class (:foreground ,cyberpunk-yellow-1))))
    `(gnus-cite-11 ((,class (:foreground ,cyberpunk-yellow))))
    `(gnus-cite-2 ((,class (:foreground ,cyberpunk-blue-1))))
@@ -499,8 +499,8 @@
    `(org-level-4 ((,class (:foreground ,cyberpunk-green))))
    `(org-level-5 ((,class (:foreground ,cyberpunk-orange))))
    `(org-level-6 ((,class (:foreground ,cyberpunk-pink))))
-   `(org-level-7 ((,class (:foreground ,cyberpunk-red))))
-   `(org-level-8 ((,class (:foreground ,cyberpunk-blue))))
+   `(org-level-7 ((,class (:foreground ,cyberpunk-green+3))))
+   `(org-level-8 ((,class (:foreground ,cyberpunk-blue-1))))
    `(org-link ((,class (:foreground ,cyberpunk-blue-6 :underline t))))
    `(org-tag ((,class (:bold t :weight bold))))
    `(org-column ((,class (:background ,cyberpunk-yellow-3 :foreground ,cyberpunk-black))))
