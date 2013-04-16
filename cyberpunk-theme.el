@@ -507,10 +507,10 @@
    `(org-column-title ((,class (:background ,cyberpunk-bg-1 :underline t :weight bold))))
    `(org-block ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-bg-05))))
    `(org-block-begin-line 
-     ((,class (:underline "#A7A6AA" :foreground "#008ED1" :background ,cyberpunk-bg-1))))
+     ((,class (:foreground "#008ED1" :background ,cyberpunk-bg-1))))
    `(org-block-background ((,class (:background ,cyberpunk-bg-05))))
    `(org-block-end-line 
-     ((,class (:overline "#A7A6AA" :foreground "#008ED1" :background ,cyberpunk-bg-1))))
+     ((,class (:foreground "#008ED1" :background ,cyberpunk-bg-1))))
 
    ;; `(org-deadline-announce ((,class (:foreground ,cyberpunk-red-1))))
    ;; `(org-scheduled ((,class (:foreground ,cyberpunk-green+4))))
