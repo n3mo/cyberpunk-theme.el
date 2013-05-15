@@ -78,6 +78,7 @@
       (cyberpunk-blue-5 "#4c83ff")
       (cyberpunk-blue-6 "#96CBFE")
       (cyberpunk-blue-7 "#00ffff")
+      (cyberpunk-blue-8 "#4F94CD")
       (cyberpunk-magenta "#dc8cc3")
       (cyberpunk-black "#000000")
       (cyberpunk-black-2 "#0C1021")
@@ -245,6 +246,24 @@
    `(diff-removed ((,class (:foreground ,cyberpunk-red))))
    `(diff-header ((,class (:background ,cyberpunk-bg+2))))
    `(diff-file-header ((,class (:background ,cyberpunk-bg+2 :foreground ,cyberpunk-fg :bold t))))
+
+   ;; ediff
+   `(ediff-current-diff-Ancestor ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-pink))))
+   `(ediff-current-diff-A ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-bg-05))))
+   `(ediff-current-diff-B ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-bg+1))))
+   `(ediff-current-diff-C ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-bg+2))))
+   `(ediff-even-diff-Ancestor ((,class (:foreground ,cyberpunk-white :background ,cyberpunk-bg-05))))
+   `(ediff-even-diff-A ((,class (:foreground ,cyberpunk-white :background ,cyberpunk-bg+1))))
+   `(ediff-even-diff-B ((,class (:foreground ,cyberpunk-white :background ,cyberpunk-bg+2))))
+   `(ediff-even-diff-C ((,class (:foreground ,cyberpunk-white :background ,cyberpunk-bg+3))))
+   `(ediff-fine-diff-Ancestor ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-pink))))
+   `(ediff-fine-diff-A ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-blue-5))))
+   `(ediff-fine-diff-B ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-blue-5))))
+   `(ediff-fine-diff-C ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-blue-5))))
+   `(ediff-odd-diff-Ancestor ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-gray-2))))
+   `(ediff-odd-diff-A ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-gray-3))))
+   `(ediff-odd-diff-B ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-gray-4))))
+   `(ediff-odd-diff-C ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-gray))))
 
    ;; ert
    `(ert-test-result-expected ((,class (:foreground ,cyberpunk-green+4 :background ,cyberpunk-bg))))
