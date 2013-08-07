@@ -1,10 +1,10 @@
 ;;; cyberpunk-theme.el --- Cyberpunk Color Theme
 
-;; Copyright 2012, Nicholas M. Van Horn
+;; Copyright 2012-2013, Nicholas M. Van Horn
 
 ;; Author: Nicholas M. Van Horn <vanhorn.nm@gmail.com>
 ;; Keywords: color theme cyberpunk
-;; Version: 1.3
+;; Version: 1.4
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -601,6 +601,26 @@
    ;; SLIME
    `(slime-repl-inputed-output-face ((,class (:foreground ,cyberpunk-red))))
 
+  ;;; ansi-term
+   `(term-color-black ((,class (:foreground ,cyberpunk-bg
+                                            :background ,cyberpunk-bg-1))))
+   `(term-color-red ((,class (:foreground ,cyberpunk-red-2
+                                          :background ,cyberpunk-red-4))))
+   `(term-color-green ((,class (:foreground ,cyberpunk-green
+                                            :background ,cyberpunk-green+2))))
+   `(term-color-yellow ((,class (:foreground ,cyberpunk-orange
+                                             :background ,cyberpunk-yellow))))
+   `(term-color-blue ((,class (:foreground ,cyberpunk-blue-1
+                                           :background ,cyberpunk-blue-4))))
+   `(term-color-magenta ((,class (:foreground ,cyberpunk-magenta
+                                              :background ,cyberpunk-red))))
+   `(term-color-cyan ((,class (:foreground ,cyberpunk-cyan
+                                           :background ,cyberpunk-blue))))
+   `(term-color-white ((,class (:foreground ,cyberpunk-fg
+                                            :background ,cyberpunk-bg-1))))
+   `(term-default-fg-color ((,class (:inherit term-color-white))))
+   `(term-default-bg-color ((,class (:inherit term-color-black))))
+
    ;; volatile-highlights
    `(vhl/default-face ((,class (:background ,cyberpunk-gray-5))))
 
@@ -661,17 +681,10 @@
   ;;; custom theme variables
   (custom-theme-set-variables
    'cyberpunk
-   `(ansi-color-names-vector [,cyberpunk-bg ,cyberpunk-red ,cyberpunk-green ,cyberpunk-yellow
-                                          ,cyberpunk-blue ,cyberpunk-magenta ,cyberpunk-cyan ,cyberpunk-fg])
-
+   `(ansi-color-names-vector [,cyberpunk-bg ,cyberpunk-red-2 ,cyberpunk-green ,cyberpunk-orange
+                                          ,cyberpunk-blue-1 ,cyberpunk-magenta ,cyberpunk-cyan ,cyberpunk-fg])
    ;; fill-column-indicator
-   `(fci-rule-color ,cyberpunk-bg-05))
-
-  ;;; colors for the ansi-term
-  (eval-after-load 'term
-    `(setq ansi-term-color-vector
-         (vector 'unspecified ,cyberpunk-bg ,cyberpunk-red ,cyberpunk-green ,cyberpunk-yellow
-		   ,cyberpunk-blue ,cyberpunk-magenta ,cyberpunk-cyan ,cyberpunk-fg))))
+   `(fci-rule-color ,cyberpunk-bg-05)))
 
 ;;;###autoload
 (when load-file-name

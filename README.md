@@ -71,6 +71,7 @@ In addition to basic face settings, cyberpunk-theme has specially-tailored suppo
 * newsticker\*
 * org-mode
 * outline
+* term
 * rainbow-delimiters
 * wanderlust\*
 * whitespace-mode\*
@@ -88,7 +89,7 @@ Please report any problems that you find, along with any suggestions or contribu
 License
 =======
 
-Copyright (C) 2012 Nicholas M. Van Horn
+Copyright (C) 2012-2013 Nicholas M. Van Horn
 
 Author: Nicholas M. Van Horn <vanhorn.nm@gmail.com>
 Keywords: color theme, cyberpunk
