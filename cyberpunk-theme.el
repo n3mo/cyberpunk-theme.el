@@ -22,6 +22,12 @@
 ;; Boston, MA 02111-1307, USA.
 ;;
 
+
+;; "and he'd still see the matrix in his sleep, bright lattices of logic
+;; unfolding across that colorless void..."
+;; William Gibson, Neuromancer.
+
+
 ;;; Commentary:
 
 ;; This theme is a port of the overtone/emacs-live theme of the same name
