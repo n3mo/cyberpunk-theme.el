@@ -4,7 +4,7 @@
 
 ;; Author: Nicholas M. Van Horn <vanhorn.nm@gmail.com>
 ;; Keywords: color theme cyberpunk
-;; Version: 1.4
+;; Version: 1.5
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -22,11 +22,9 @@
 ;; Boston, MA 02111-1307, USA.
 ;;
 
-
 ;; "and he'd still see the matrix in his sleep, bright lattices of logic
 ;; unfolding across that colorless void..."
 ;; William Gibson, Neuromancer.
-
 
 ;;; Commentary:
 
