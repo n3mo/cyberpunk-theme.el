@@ -158,12 +158,12 @@
    `(mode-line
      ((,class (:foreground ,cyberpunk-blue-5
                            :background ,cyberpunk-gray-5
-                           :box (:line-width -1)))))
+                           :box (:line-width -1 :color ,cyberpunk-blue-5)))))
    ;; `(mode-line-buffer-id ((,class (:foreground ,cyberpunk-yellow :weight bold))))
    `(mode-line-inactive
      ((,class (:foreground ,cyberpunk-gray-7
                            :background ,cyberpunk-gray-6
-                           :box (:line-width -1)))))
+                           :box (:line-width -1 :color ,cyberpunk-blue-5)))))
    `(region ((,class (:background ,cyberpunk-red-5))))
    `(secondary-selection ((,class (:background ,cyberpunk-bg+2))))
    `(trailing-whitespace ((,class (:background ,cyberpunk-red))))
