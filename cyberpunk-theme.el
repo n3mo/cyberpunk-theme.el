@@ -140,6 +140,10 @@
    `(grep-match-face ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-pink-1))))
    `(match ((,class (:background ,cyberpunk-black :foreground ,cyberpunk-pink-1))))
 
+
+   ;;; multiple-cursors
+   `(mc/cursor-face ((,class (:inverse-video nil, :background ,cyberpunk-pink :foreground ,cyberpunk-black))))
+
    ;; faces used by isearch
    `(isearch ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-pink-1))))
    `(isearch-fail ((,class (:background ,cyberpunk-red-1))))
