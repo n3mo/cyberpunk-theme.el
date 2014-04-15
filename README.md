@@ -68,6 +68,7 @@ In addition to basic face settings, cyberpunk-theme has specially-tailored suppo
 * message-mode
 * mew\*
 * mic-paren\*
+* multiple cursors
 * newsticker\*
 * org-mode
 * outline
@@ -89,7 +90,7 @@ Please report any problems that you find, along with any suggestions or contribu
 License
 =======
 
-Copyright (C) 2012-2013 Nicholas M. Van Horn
+Copyright (C) 2012-2014 Nicholas M. Van Horn
 
 Author: Nicholas M. Van Horn <vanhorn.nm@gmail.com>
 Keywords: color theme, cyberpunk
