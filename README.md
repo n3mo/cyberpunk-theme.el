@@ -51,6 +51,7 @@ In addition to basic face settings, cyberpunk-theme has specially-tailored suppo
 * autocomplete
 * compilation-mode\*
 * ediff
+* enhanced ruby mode
 * erc
 * eshell
 * flymake\*
