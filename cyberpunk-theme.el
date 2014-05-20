@@ -681,6 +681,12 @@
    ;; yasnippet
    `(yas/field-highlight-face ((,class (:background ,cyberpunk-pink-1 :foreground ,cyberpunk-black))))
 
+   ;; enh-ruby-mode enh-ruby-op-face
+   `(enh-ruby-op-face ((,class (:foreground ,cyberpunk-blue-7))))
+   `(enh-ruby-heredoc-delimiter-face ((,class (:foreground ,cyberpunk-green+2))))
+   `(enh-ruby-string-delimiter-face ((,class (:foreground ,cyberpunk-green+2))))
+   `(enh-ruby-regexp-delimiter-face ((,class (:foreground ,cyberpunk-blue-1))))
+
    ;; yascroll
    `(yascroll:thumb-text-area ((,class (:background ,cyberpunk-bg-1))))
    `(yascroll:thumb-fringe ((,class (:background ,cyberpunk-bg-1 :foreground ,cyberpunk-bg-1))))
