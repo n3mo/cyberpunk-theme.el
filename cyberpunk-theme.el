@@ -248,6 +248,13 @@
 
    `(window-number-face ((,class (:background ,cyberpunk-gray-6 :foreground ,cyberpunk-blue-5))))
 
+   ;; company-mode
+   `(company-tooltip ((,class (:foreground ,cyberpunk-pink-1 :background ,cyberpunk-gray-2))))
+   `(company-tooltip-selection ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-pink-1))))
+   `(company-tooltip-annotation ((,class (:foreground ,cyberpunk-black-3))))
+   `(company-scrollbar-fg ((,class (:background ,cyberpunk-black-3))))
+   `(company-scrollbar-bg ((,class (:background ,cyberpunk-gray-5))))
+
    ;; diff
    `(diff-added ((,class (:foreground ,cyberpunk-green))))
    `(diff-changed ((,class (:foreground ,cyberpunk-yellow))))
