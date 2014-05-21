@@ -51,6 +51,7 @@ In addition to basic face settings, cyberpunk-theme has specially-tailored suppo
 * AUCTeX/LaTeX\*
 * MuMaMo\*
 * autocomplete
+* company-mode
 * compilation-mode\*
 * ediff
 * enhanced ruby mode
