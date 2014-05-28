@@ -35,7 +35,7 @@ Once set up, you can install <code>cyberpunk</code> using the following command:
 M-x package-install cyberpunk-theme
 </pre>
 
-or, by alternatively running the command <code>list-packages</code>, marking the cyberpunk-theme package with the command "i" and running the execute execute command "x".
+or, by alternatively running the command <code>list-packages</code>, marking the cyberpunk-theme package with the command "i" and running the execute command "x".
 
 If you want cyberpunk-theme to be set at startup, add the following line to your .emacs init file:
 
