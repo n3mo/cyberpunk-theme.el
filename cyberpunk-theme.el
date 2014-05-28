@@ -254,6 +254,7 @@
    `(company-tooltip-annotation ((,class (:foreground ,cyberpunk-black-3))))
    `(company-scrollbar-fg ((,class (:background ,cyberpunk-black-3))))
    `(company-scrollbar-bg ((,class (:background ,cyberpunk-gray-5))))
+   `(company-preview ((,class (:foreground ,cyberpunk-gray :background ,cyberpunk-pink-1))))
 
    ;; diff
    `(diff-added ((,class (:foreground ,cyberpunk-green))))
