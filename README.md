@@ -46,7 +46,7 @@ If you want cyberpunk-theme to be set at startup, add the following line to your
 Specific Modes
 ==============
 
-In addition to basic face settings, cyberpunk-theme has specially-tailored support for the following modes. Please share any suggestions for additional modes. Modes marked with \* are currently defined, but poorly so. If you use one of these modes and have customization suggestions I would greatly appreciate any feedback on how to make a more seamless experience.
+In addition to basic face settings, cyberpunk-theme has specially-tailored support for the following modes. Please share any suggestions for additional modes. Modes marked with \* are currently defined, but may benefit from further adjustments to blend more seamlessly with the cyberpunk experience. If you use one of these modes and have customization suggestions I would greatly appreciate any feedback on how to make a more seamless experience.
 
 * AUCTeX/LaTeX\*
 * MuMaMo\*
