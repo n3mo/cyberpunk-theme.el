@@ -4,7 +4,7 @@
 
 ;; Author: Nicholas M. Van Horn <vanhorn.nm@gmail.com>
 ;; Keywords: color theme cyberpunk
-;; Version: 1.9
+;; Version: 1.10
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -249,7 +249,9 @@
    `(window-number-face ((,class (:background ,cyberpunk-gray-6 :foreground ,cyberpunk-blue-5))))
 
    ;; company-mode
-   `(company-tooltip ((,class (:foreground ,cyberpunk-pink-1 :background ,cyberpunk-gray-2))))
+   `(company-tooltip ((,class (:background ,cyberpunk-gray-2 :foreground ,cyberpunk-yellow))))
+   `(company-tooltip-common ((,class (:inherit company-tooltip :foreground ,cyberpunk-blue))))
+   `(company-tooltip-common-selection ((,class (:inherit company-tooltip-selection :foreground ,cyberpunk-blue))))
    `(company-tooltip-selection ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-pink-1))))
    `(company-tooltip-annotation ((,class (:foreground ,cyberpunk-black-3))))
    `(company-scrollbar-fg ((,class (:background ,cyberpunk-black-3))))
