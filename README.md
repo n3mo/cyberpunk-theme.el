@@ -29,6 +29,13 @@ Cyberpunk is available in [MELPA](http://melpa.milkbox.net/). This installation 
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 ```
 
+Alternatively, if you prefer stability you can install from the [MELPA-stable](http://melpa-stable.milkbox.net) repository by instead adding the following to your init file:
+
+```lisp
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
+```
+
 Once set up, you can install <code>cyberpunk</code> using the following command:
 
 <pre>
