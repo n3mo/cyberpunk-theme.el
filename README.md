@@ -43,7 +43,7 @@ If you want cyberpunk-theme to be set at startup, add the following line to your
 (load-theme 'cyberpunk t)
 ```
 
-If you've install cyberpunk using package-install, you made need to wait to load the cyberpunk theme until startup initialization is complete. In this case, instead of <code>(load-theme 'cyberpunk t)</code>, you may need something like:
+If you've installed cyberpunk using package-install, you may need to wait to load the cyberpunk theme until startup initialization is complete. In this case, instead of <code>(load-theme 'cyberpunk t)</code>, you may need something like:
 
 ```lisp
 (add-hook 'after-init-hook 
