@@ -443,6 +443,9 @@
    ;; linum-mode
    `(linum ((,class (:foreground ,cyberpunk-green+2 :background ,cyberpunk-bg))))
 
+   ;;linum-relative
+   `(linum-relative-current-face ((,class (:inherit linum :foreground ,cyberpunk-white :weight bold))))
+
    ;; magit
    `(magit-section-title ((,class (:foreground ,cyberpunk-pink-1))))
    `(magit-branch ((,class (:foreground ,cyberpunk-yellow-5))))
