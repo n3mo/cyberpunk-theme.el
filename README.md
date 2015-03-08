@@ -82,6 +82,7 @@ In addition to basic face settings, cyberpunk-theme has specially-tailored suppo
 * isearch
 * jabber\*
 * js2\*
+* linum-relative
 * magit
 * message-mode
 * mew\*
@@ -108,9 +109,9 @@ Please report any problems that you find, along with any suggestions or contribu
 License
 =======
 
-Copyright (C) 2012-2014 Nicholas M. Van Horn
+Copyright (C) 2012-2015 Nicholas M. Van Horn
 
-Author: Nicholas M. Van Horn <vanhorn.nm@gmail.com>
+Author: Nicholas M. Van Horn <nvanhorn@nicholasvanhorn.com>
 Keywords: color theme, cyberpunk
 
 This program is free software; you can redistribute it and/or modify
