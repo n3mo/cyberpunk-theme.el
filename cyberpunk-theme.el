@@ -253,7 +253,7 @@
    `(company-tooltip-common ((,class (:inherit company-tooltip :foreground ,cyberpunk-blue))))
    `(company-tooltip-common-selection ((,class (:inherit company-tooltip-selection :foreground ,cyberpunk-blue))))
    `(company-tooltip-selection ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-pink-1))))
-   `(company-tooltip-annotation ((,class (:foreground ,cyberpunk-black-3))))
+   `(company-tooltip-annotation ((,class (:inherit company-tooltip :foreground ,cyberpunk-black-3))))
    `(company-scrollbar-fg ((,class (:background ,cyberpunk-black-3))))
    `(company-scrollbar-bg ((,class (:background ,cyberpunk-gray-5))))
    `(company-preview ((,class (:foreground ,cyberpunk-gray :background ,cyberpunk-pink-1))))
