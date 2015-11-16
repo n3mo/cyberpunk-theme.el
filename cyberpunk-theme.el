@@ -4,7 +4,7 @@
 
 ;; Author: Nicholas M. Van Horn <vanhorn.nm@gmail.com>
 ;; Keywords: color theme cyberpunk
-;; Version: 1.14
+;; Version: 1.15
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -106,7 +106,6 @@
    `(link-visited ((,class (:foreground ,cyberpunk-yellow-2 :underline t :weight normal))))
    `(blue ((,class (:foreground ,cyberpunk-blue))))
    `(bold ((,class (:bold t))))
-   `(bold-italic ((,class (:bold t))))
    `(border-glyph ((,class (nil))))
    `(buffers-tab ((,class (:background ,cyberpunk-black-2 :foreground ,cyberpunk-white-2))))
 
@@ -151,10 +150,8 @@
    `(lazy-highlight ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-yellow))))
    `(query-replace ((,class (:background ,cyberpunk-gray-5))))
    `(Highline-face ((,class (:background ,cyberpunk-green-1))))
-   `(italic ((,class (nil))))
    `(left-margin ((,class (nil))))
    `(toolbar ((,class (nil))))
-   `(underline ((,class (:underline nil))))
    `(text-cursor ((,class (:background ,cyberpunk-yellow :foreground ,cyberpunk-black))))
 
    `(menu ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-bg))))
