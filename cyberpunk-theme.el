@@ -171,30 +171,27 @@
    `(vertical-border ((,class (:foreground ,cyberpunk-gray-5 :background ,cyberpunk-black))))
 
    ;;; font lock
-   `(font-lock-builtin-face ((,class (:foreground ,cyberpunk-orange-2))))
+   `(font-lock-builtin-face ((,class (:foreground ,cyberpunk-blue-5))))
    `(font-lock-comment-face ((,class (:foreground ,cyberpunk-gray-2 :italic t))))
    ;; `(font-lock-comment-delimiter-face ((,class (:foreground ,cyberpunk-green)))) 
-   `(font-lock-constant-face ((,class (:foreground ,cyberpunk-blue-5))))
+   `(font-lock-constant-face ((,class (:foreground ,cyberpunk-blue-6))))
    ;; `(font-lock-doc-face ((,class (:foreground ,cyberpunk-green+1))))
-   `(font-lock-doc-string-face ((,class (:foreground ,cyberpunk-orange-1))))
+   `(font-lock-doc-face ((,class (:foreground ,cyberpunk-yellow-1))))
    `(font-lock-function-name-face ((,class (:foreground ,cyberpunk-pink-1))))
-   `(font-lock-keyword-face ((,class (:foreground ,cyberpunk-yellow-1))))
+   `(font-lock-keyword-face ((,class (:foreground ,cyberpunk-blue-5))))
    ;; `(font-lock-negation-char-face ((,class (:foreground ,cyberpunk-fg))))
    `(font-lock-preprocessor-face ((,class (:foreground ,cyberpunk-gray-3))))
    `(font-lock-string-face ((,class (:foreground ,cyberpunk-green+1))))
-   `(font-lock-type-face ((,class (:foreground ,cyberpunk-yellow-3))))
-   `(font-lock-variable-name-face ((,class (:foreground ,cyberpunk-yellow-3))))
+   `(font-lock-type-face ((,class (:foreground ,cyberpunk-green+3))))
+   `(font-lock-variable-name-face ((,class (:foreground ,cyberpunk-pink))))
    `(font-lock-warning-face ((,class (:foreground ,cyberpunk-pink))))
    `(font-lock-reference-face ((,class (:foreground ,cyberpunk-gray))))
    `(font-lock-regexp-grouping-backslash ((,class (:foreground ,cyberpunk-yellow-4))))
    `(font-lock-regexp-grouping-construct ((,class (:foreground ,cyberpunk-red))))
 
-
    `(c-annotation-face ((,class (:inherit font-lock-constant-face))))
 
    `(gui-element ((,class (:background ,cyberpunk-gray-5 :foreground ,cyberpunk-blue-6))))
-   
-
 
    ;;; newsticker
    ;; These are currently placeholders that probably look terrible.
@@ -648,6 +645,10 @@
    `(outline-3 ((,class (:inherit outline-4 :height 1.0))))
    `(outline-2 ((,class (:inherit outline-3 :height 1.0))))
    `(outline-1 ((,class (:inherit outline-2 :height 1.0))))
+
+   ;; racket-mode
+   `(racket-keyword-argument-face ((t (:inherit font-lock-constant-face))))
+   `(racket-selfeval-face ((t (:inherit font-lock-type-face))))
 
    ;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face ((,class (:foreground ,cyberpunk-red-1))))
