@@ -22,18 +22,18 @@ You can then load the theme at any time by running the command <code>M-x load-th
 Package.el
 ----------
 
-Cyberpunk is available in [MELPA](http://melpa.milkbox.net/). This installation method assumes that you have added MELPA to your package archive list. This can be accomplished in your init file with the following command:
+Cyberpunk is available in [MELPA](https://melpa.org/). This installation method assumes that you have added MELPA to your package archive list. This can be accomplished in your init file with the following command:
 
 ```lisp
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
 ```
 
-Alternatively, if you prefer stability you can install from the [MELPA-stable](http://melpa-stable.milkbox.net) repository by instead adding the following to your init file:
+Alternatively, if you prefer stability you can install from the [MELPA-stable](https://stable.melpa.org/) repository by instead adding the following to your init file:
 
 ```lisp
 (add-to-list 'package-archives
-             '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 ```
 
 Once set up, you can install <code>cyberpunk</code> using the following command:
