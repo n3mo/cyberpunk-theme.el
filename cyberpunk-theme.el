@@ -283,8 +283,8 @@
    `(ert-test-result-unexpected ((,class (:foreground ,cyberpunk-red :background ,cyberpunk-bg))))
 
    ;; eshell
-   `(eshell-prompt ((,class (:foreground ,cyberpunk-yellow :weight bold))))
-   `(eshell-ls-archive ((,class (:foreground ,cyberpunk-red-1 :weight bold))))
+   `(eshell-prompt ((,class (:foreground ,cyberpunk-blue-5 :weight bold))))
+   `(eshell-ls-archive ((,class (:foreground ,cyberpunk-magenta :weight bold))))
    `(eshell-ls-backup ((,class (:inherit font-lock-comment))))
    `(eshell-ls-clutter ((,class (:inherit font-lock-comment))))
    `(eshell-ls-directory ((,class (:foreground ,cyberpunk-blue+1 :weight bold))))
