@@ -91,6 +91,7 @@ In addition to basic face settings, cyberpunk-theme has specially-tailored suppo
 * newsticker\*
 * org-mode
 * outline
+* racket-mode
 * term
 * rainbow-delimiters
 * wanderlust\*
@@ -99,7 +100,7 @@ In addition to basic face settings, cyberpunk-theme has specially-tailored suppo
 Acknowledgments 
 ===============
 
-This theme is a port of the [overtone/emacs-live](https://github.com/overtone/emacs-live) theme of the same name. The original theme was designed for use with the color-theme package. 
+This theme began as a port of the [overtone/emacs-live](https://github.com/overtone/emacs-live) theme of the same name and evolved from there. The original theme was designed for use with the color-theme package. 
 
 Bugs & Improvements
 ===================
