@@ -461,8 +461,7 @@
    `(magit-diff-removed                ((t (:foreground ,cyberpunk-magenta))))
    `(magit-diff-removed-highlight      ((t (:foreground ,cyberpunk-magenta :weight bold))))
    `(magit-diff-context                ((t (:foreground ,cyberpunk-gray))))
-   `(magit-diff-context-highlight      ((t (:background ,cyberpunk-bg+2
-                                            :foreground ,cyberpunk-gray))))
+   `(magit-diff-context-highlight      ((t (:foreground ,cyberpunk-gray :weight bold))))
    `(magit-diffstat-added   ((t (:foreground ,cyberpunk-blue-5))))
    `(magit-diffstat-removed ((t (:foreground ,cyberpunk-magenta))))
    ;; magit popup
