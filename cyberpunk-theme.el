@@ -419,7 +419,7 @@
    `(js2-jsdoc-tag-face ((,class (:foreground ,cyberpunk-green-1))))
    `(js2-jsdoc-type-face ((,class (:foreground ,cyberpunk-green+2))))
    `(js2-jsdoc-value-face ((,class (:foreground ,cyberpunk-green+3))))
-   `(js2-function-param-face ((,class (:foreground, cyberpunk-green+3))))
+   `(js2-function-param-face ((,class (:foreground ,cyberpunk-green+3))))
    `(js2-external-variable-face ((,class (:foreground ,cyberpunk-orange))))
 
    ;; jabber-mode
