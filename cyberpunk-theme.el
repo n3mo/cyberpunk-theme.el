@@ -456,6 +456,11 @@
                                             :foreground ,cyberpunk-blue-6))))
    `(magit-diff-lines-heading          ((t (:background ,cyberpunk-blue-6
                                             :foreground ,cyberpunk-bg+1))))
+   `(magit-diff-added                  ((t (:foreground ,cyberpunk-blue-5))))
+   `(magit-diff-added-highlight        ((t (:foreground ,cyberpunk-blue-5 :weight bold))))
+   `(magit-diff-removed                ((t (:foreground ,cyberpunk-magenta))))
+   `(magit-diff-removed-highlight      ((t (:foreground ,cyberpunk-magenta :weight bold))))
+   `(magit-diff-context                ((t (:foreground ,cyberpunk-gray))))
    `(magit-diff-context-highlight      ((t (:background ,cyberpunk-bg+2
                                             :foreground ,cyberpunk-gray))))
    `(magit-diffstat-added   ((t (:foreground ,cyberpunk-blue-5))))
