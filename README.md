@@ -83,7 +83,7 @@ In addition to basic face settings, cyberpunk-theme has specially-tailored suppo
 * jabber\*
 * js2\*
 * linum-relative
-* magit v2+
+* magit
 * message-mode
 * mew\*
 * mic-paren\*
