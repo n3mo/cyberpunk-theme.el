@@ -419,7 +419,7 @@
    `(js2-jsdoc-tag-face ((,class (:foreground ,cyberpunk-green-1))))
    `(js2-jsdoc-type-face ((,class (:foreground ,cyberpunk-green+2))))
    `(js2-jsdoc-value-face ((,class (:foreground ,cyberpunk-green+3))))
-   `(js2-function-param-face ((,class (:foreground, cyberpunk-green+3))))
+   `(js2-function-param-face ((,class (:foreground ,cyberpunk-green+3))))
    `(js2-external-variable-face ((,class (:foreground ,cyberpunk-orange))))
 
    ;; jabber-mode
@@ -456,10 +456,14 @@
                                             :foreground ,cyberpunk-blue-6))))
    `(magit-diff-lines-heading          ((t (:background ,cyberpunk-blue-6
                                             :foreground ,cyberpunk-bg+1))))
-   `(magit-diff-context-highlight      ((t (:background ,cyberpunk-bg+2
-                                            :foreground ,cyberpunk-gray))))
-   `(magit-diffstat-added   ((t (:foreground ,cyberpunk-blue-5))))
-   `(magit-diffstat-removed ((t (:foreground ,cyberpunk-magenta))))
+   `(magit-diff-added                  ((t (:foreground ,cyberpunk-blue-5))))
+   `(magit-diff-added-highlight        ((t (:inherit magit-diff-added :weight bold))))
+   `(magit-diff-removed                ((t (:foreground ,cyberpunk-magenta))))
+   `(magit-diff-removed-highlight      ((t (:inherit magit-diff-removed :weight bold))))
+   `(magit-diff-context                ((t (:foreground ,cyberpunk-gray))))
+   `(magit-diff-context-highlight      ((t (:inherit magit-diff-context :weight bold))))
+   `(magit-diffstat-added   ((t (:inherit magit-diff-added))))
+   `(magit-diffstat-removed ((t (:inherit magit-diff-removed))))
    ;; magit popup
    `(magit-popup-heading             ((t (:foreground ,cyberpunk-pink-1  :weight bold))))
    `(magit-popup-key                 ((t (:foreground ,cyberpunk-blue+1 :weight bold))))
