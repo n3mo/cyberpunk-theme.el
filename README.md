@@ -108,7 +108,8 @@ Bugs & Improvements
 Please report any problems that you find, along with any suggestions or contributions to the theme. 
 
 You can support this project, or my other projects via [ChangeTip](http://n3mo.tip.me)
-<div class="changetip_tipme_button" data-bid="b282b563-2c9a-4d6e-bac3-6b63ffb0df48" data-uid="ccb70fbfc3e24027b2786d49cb2aa2f3"></div><script>(function(document,script,id){var js,r=document.getElementsByTagName(script)[0],protocol=/^http:/.test(document.location)?'http':'https';if(!document.getElementById(id)){js=document.createElement(script);js.id=id;js.src=protocol+'://widgets.changetip.com/public/js/widgets.js';r.parentNode.insertBefore(js,r)}}(document,'script','changetip_w_0'));</script>
+
+[![Support via ChangeTip](http://www.nicholasvanhorn.com/images/changetip.png)](http://n3mo.tip.me)
 
 
 License
