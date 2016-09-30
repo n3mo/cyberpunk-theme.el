@@ -84,7 +84,9 @@
       (cyberpunk-blue-7 "#00ffff")
       (cyberpunk-blue-8 "#4F94CD")
       (cyberpunk-magenta "#dc8cc3")
-      (cyberpunk-black "#000000")
+      (cyberpunk-black (if (and (not (display-graphic-p)) (eq system-type 'darwin))
+                           "ARGBBB000000"
+                         "#000000"))
       (cyberpunk-black-2 "#0C1021")
       (cyberpunk-black-3 "#0A0A0A")
       (cyberpunk-gray "#d3d3d3")
