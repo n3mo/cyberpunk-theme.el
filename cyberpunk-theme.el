@@ -1,10 +1,10 @@
 ;;; cyberpunk-theme.el --- Cyberpunk Color Theme
 
-;; Copyright 2012-2015, Nicholas M. Van Horn
+;; Copyright 2012-2016, Nicholas M. Van Horn
 
 ;; Author: Nicholas M. Van Horn <vanhorn.nm@gmail.com>
 ;; Keywords: color theme cyberpunk
-;; Version: 1.17
+;; Version: 1.18
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
