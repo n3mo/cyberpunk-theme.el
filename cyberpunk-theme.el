@@ -409,6 +409,7 @@
    `(helm-selection-line ((,class (:background ,cyberpunk-bg+1))))
    `(helm-visible-mark ((,class (:foreground ,cyberpunk-bg :background ,cyberpunk-yellow-2))))
    `(helm-candidate-number ((,class (:foreground ,cyberpunk-green+4 :background ,cyberpunk-bg-1))))
+   `(helm-ff-directory ((,class (:foreground ,cyberpunk-pink :background ,cyberpunk-bg))))
 
    ;; hl-line-mode
    `(hl-sexp-face ((,class (:background ,cyberpunk-gray-5))))
