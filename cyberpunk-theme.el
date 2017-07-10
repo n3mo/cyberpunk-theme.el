@@ -652,6 +652,14 @@
    `(outline-2 ((,class (:inherit outline-3 :height 1.0))))
    `(outline-1 ((,class (:inherit outline-2 :height 1.0))))
 
+   ;; emms
+   `(emms-browser-year/genre-face ((,class (:foreground ,cyberpunk-blue-3 :height 1.0))))
+   `(emms-browser-artist-face ((,class (:foreground ,cyberpunk-pink-1 :height 1.0))))
+   `(emms-browser-composer-face ((,class (:foreground ,cyberpunk-blue-3 :height 1.0))))
+   `(emms-browser-performer-face ((,class (:foreground ,cyberpunk-blue-3 :height 1.0))))
+   `(emms-browser-album-face ((,class (:foreground ,cyberpunk-yellow :height 1.0))))
+   `(emms-browser-track-face ((,class (:foreground ,cyberpunk-blue-5 :height 1.0))))
+
    ;; racket-mode
    `(racket-keyword-argument-face ((t (:inherit font-lock-constant-face))))
    `(racket-selfeval-face ((t (:inherit font-lock-type-face))))
