@@ -660,6 +660,26 @@
    `(emms-browser-album-face ((,class (:foreground ,cyberpunk-yellow :height 1.0))))
    `(emms-browser-track-face ((,class (:foreground ,cyberpunk-blue-5 :height 1.0))))
 
+   ;; Calfw
+   `(cfw:face-title ((,class (:foreground ,cyberpunk-pink-1 :weight bold :height 1.8))))
+   `(cfw:face-header ((,class (:foreground ,cyberpunk-yellow-5 :weight bold))))
+   `(cfw:face-sunday ((,class (:foreground ,cyberpunk-red :weight bold))))
+   `(cfw:face-saturday ((,class (:foreground ,cyberpunk-green :weight bold))))
+   `(cfw:face-holiday ((,class (:foreground ,cyberpunk-pink-2 :weight bold))))
+   `(cfw:face-grid ((,class (:foreground ,cyberpunk-gray-3))))
+   `(cfw:face-default-content ((,class (:foreground ,cyberpunk-cyan))))
+   `(cfw:face-periods ((,class (:foreground ,cyberpunk-cyan :weight bold))))
+   `(cfw:face-day-title ((,class (:foreground ,cyberpunk-fg))))
+   `(cfw:face-default-day ((,class (:foreground ,cyberpunk-fg :weight bold))))
+   `(cfw:face-annotation ((,class (:foreground ,cyberpunk-gray))))
+   `(cfw:face-disable ((,class (:foreground ,cyberpunk-gray-2 :weight bold))))
+   `(cfw:face-today-title ((,class (:foreground ,cyberpunk-blue :background ,cyberpunk-magenta))))
+   `(cfw:face-today ((,class (:foreground ,cyberpunk-fg :weight bold))))
+   `(cfw:face-select ((,class (:background ,cyberpunk-bg+2))))
+   `(cfw:face-toolbar ((,class (:background ,cyberpunk-blue-8))))
+   `(cfw:face-toolbar-button-off ((,class (:foreground ,cyberpunk-white :background ,cyberpunk-blue-8 :weight bold))))
+   `(cfw:face-toolbar-button-on ((,class (:foreground ,cyberpunk-white :background ,cyberpunk-orange-1 :weight bold))))
+
    ;; racket-mode
    `(racket-keyword-argument-face ((t (:inherit font-lock-constant-face))))
    `(racket-selfeval-face ((t (:inherit font-lock-type-face))))
