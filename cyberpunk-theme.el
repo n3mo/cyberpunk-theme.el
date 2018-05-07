@@ -610,9 +610,9 @@
                               :box (:line-width 1 :style none)))))
    `(org-todo ((,class (:bold t :foreground ,cyberpunk-orange :weight bold
                               :box (:line-width 1 :style none)))))
-   `(org-level-1 ((,class (:foreground ,cyberpunk-pink-1 :height 1.3))))
-   `(org-level-2 ((,class (:foreground ,cyberpunk-yellow :height 1.2))))
-   `(org-level-3 ((,class (:foreground ,cyberpunk-blue-5 :height 1.1))))
+   `(org-level-1 ((,class (:foreground ,cyberpunk-pink-1))))
+   `(org-level-2 ((,class (:foreground ,cyberpunk-yellow))))
+   `(org-level-3 ((,class (:foreground ,cyberpunk-blue-5))))
    `(org-level-4 ((,class (:foreground ,cyberpunk-green))))
    `(org-level-5 ((,class (:foreground ,cyberpunk-orange))))
    `(org-level-6 ((,class (:foreground ,cyberpunk-pink))))
