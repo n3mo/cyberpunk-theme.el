@@ -812,6 +812,11 @@
    ;; yascroll
    `(yascroll:thumb-text-area ((,class (:background ,cyberpunk-bg-1))))
    `(yascroll:thumb-fringe ((,class (:background ,cyberpunk-bg-1 :foreground ,cyberpunk-bg-1))))
+
+   ;; customize
+   `(custom-button ((,class (:box (:line-width 2 :style released-button)
+                                  :background ,cyberpunk-bg-05 :foreground ,cyberpunk-fg))))
+   `(custom-button-unraised ((,class (:background ,cyberpunk-bg-05 :foreground ,cyberpunk-fg))))
    )
 
   ;;; custom theme variables
