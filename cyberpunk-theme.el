@@ -120,7 +120,7 @@
    `(default ((,class (:foreground ,cyberpunk-gray :background ,cyberpunk-black))))
    `(cursor ((,class (:background ,cyberpunk-fg))))
    `(escape-glyph-face ((,class (:foreground ,cyberpunk-red))))
-   ;; `(fringe ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-bg+1))))
+   `(fringe ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-bg-1))))
    `(header-line ((,class (:foreground ,cyberpunk-yellow
                                        :background ,cyberpunk-bg-1
                                        :box (:line-width -1 :style released-button)))))
