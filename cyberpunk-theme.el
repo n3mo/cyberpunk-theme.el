@@ -4,7 +4,7 @@
 
 ;; Author: Nicholas M. Van Horn <nvanhorn@protonmail.com>
 ;; Keywords: color theme cyberpunk
-;; Version: 1.20
+;; Version: 1.21
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
