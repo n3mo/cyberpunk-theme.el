@@ -3,6 +3,7 @@
 ;; Copyright 2012-2018, Nicholas M. Van Horn
 
 ;; Author: Nicholas M. Van Horn <nvanhorn@protonmail.com>
+;; Homepage: https://github.com/n3mo/cyberpunk-theme.el
 ;; Keywords: color theme cyberpunk
 ;; Version: 1.21
 
