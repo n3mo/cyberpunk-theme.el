@@ -818,6 +818,9 @@
    `(custom-button ((,class (:box (:line-width 2 :style released-button)
                                   :background ,cyberpunk-bg-05 :foreground ,cyberpunk-fg))))
    `(custom-button-unraised ((,class (:background ,cyberpunk-bg-05 :foreground ,cyberpunk-fg))))
+
+   ;; info
+   `(Info-quoted ((,class (:inherit fixed-pitch-serif :foreground ,cyberpunk-pink))))
    )
 
   ;;; custom theme variables
