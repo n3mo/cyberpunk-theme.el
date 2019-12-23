@@ -749,8 +749,12 @@
                                            :background ,cyberpunk-blue))))
    `(term-color-white ((,class (:foreground ,cyberpunk-fg
                                             :background ,cyberpunk-bg-1))))
+   ;; term-default-fg-color & term-default-bg-color are obsolete, kept
+   ;; here for compatibility reasons.
    `(term-default-fg-color ((,class (:inherit term-color-white))))
    `(term-default-bg-color ((,class (:inherit term-color-black))))
+   ;; Used in 24.3 and later to replace above.
+   `(term ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-bg))))
 
    ;; volatile-highlights
    `(vhl/default-face ((,class (:background ,cyberpunk-gray-5))))
