@@ -832,6 +832,9 @@
    ;; dired+
    `(diredp-symlink ((,class (:foreground ,cyberpunk-pink))))
    `(diredp-compressed-file-suffix ((,class (:foreground ,cyberpunk-blue-1))))
+
+   ;; ivy
+   `(ivy-current-match ((,class (:box (:line-width 3 :color ,cyberpunk-magenta :style pressed-button) :weight bold))))
    )
 
   ;;; custom theme variables
