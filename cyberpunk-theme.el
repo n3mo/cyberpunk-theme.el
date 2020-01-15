@@ -749,8 +749,12 @@
                                            :background ,cyberpunk-blue))))
    `(term-color-white ((,class (:foreground ,cyberpunk-fg
                                             :background ,cyberpunk-bg-1))))
+   ;; term-default-fg-color & term-default-bg-color are obsolete, kept
+   ;; here for compatibility reasons.
    `(term-default-fg-color ((,class (:inherit term-color-white))))
    `(term-default-bg-color ((,class (:inherit term-color-black))))
+   ;; Used in 24.3 and later to replace above.
+   `(term ((,class (:foreground ,cyberpunk-fg :background ,cyberpunk-bg))))
 
    ;; volatile-highlights
    `(vhl/default-face ((,class (:background ,cyberpunk-gray-5))))
@@ -818,6 +822,19 @@
    `(custom-button ((,class (:box (:line-width 2 :style released-button)
                                   :background ,cyberpunk-bg-05 :foreground ,cyberpunk-fg))))
    `(custom-button-unraised ((,class (:background ,cyberpunk-bg-05 :foreground ,cyberpunk-fg))))
+
+   ;; info
+   `(Info-quoted ((,class (:inherit fixed-pitch-serif :foreground ,cyberpunk-pink))))
+
+   ;; dired
+   `(dired-symlink-face ((,class (:foreground ,cyberpunk-pink))))
+
+   ;; dired+
+   `(diredp-symlink ((,class (:foreground ,cyberpunk-pink))))
+   `(diredp-compressed-file-suffix ((,class (:foreground ,cyberpunk-blue-1))))
+
+   ;; ivy
+   `(ivy-current-match ((,class (:box (:line-width 3 :color ,cyberpunk-magenta :style pressed-button) :weight bold))))
    )
 
   ;;; custom theme variables
