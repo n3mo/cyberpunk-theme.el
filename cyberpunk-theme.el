@@ -453,7 +453,7 @@
 
    ;; magit
    ;; magit headings and diffs
-   `(magit-section-highlight ((t (:background ,cyberpunk-bg+1))))
+   `(magit-section-highlight ((t (:background ,cyberpunk-bg-1))))
    `(magit-section-heading ((t (:foreground ,cyberpunk-blue+1 :weight bold))))
    `(magit-section-heading-selection ((t (:foreground ,cyberpunk-red+1 :weight bold))))
    `(magit-diff-file-heading           ((t (:weight bold))))
