@@ -460,9 +460,9 @@
    `(magit-diff-file-heading-highlight ((t (:background ,cyberpunk-bg+2  :weight bold))))
    `(magit-diff-file-heading-selection ((t (:background ,cyberpunk-bg+2
                                                         :foreground ,cyberpunk-blue-6 :weight bold))))
-   `(magit-diff-hunk-heading           ((t (:background ,cyberpunk-bg))))
-   `(magit-diff-hunk-heading-highlight ((t (:background ,cyberpunk-bg+1))))
-   `(magit-diff-hunk-heading-selection ((t (:background ,cyberpunk-bg+1
+   `(magit-diff-hunk-heading           ((t (:background ,cyberpunk-bg+1))))
+   `(magit-diff-hunk-heading-highlight ((t (:background ,cyberpunk-bg+2))))
+   `(magit-diff-hunk-heading-selection ((t (:background ,cyberpunk-bg+2
                                                         :foreground ,cyberpunk-blue-6))))
    `(magit-diff-lines-heading          ((t (:background ,cyberpunk-blue-6
                                                         :foreground ,cyberpunk-bg+1))))
@@ -474,6 +474,7 @@
    `(magit-diff-context-highlight      ((t (:inherit magit-diff-context :weight bold))))
    `(magit-diffstat-added   ((t (:inherit magit-diff-added))))
    `(magit-diffstat-removed ((t (:inherit magit-diff-removed))))
+   `(diff-refine-added ((t (:background ,cyberpunk-green-2))))
    ;; magit popup
    `(magit-popup-heading             ((t (:foreground ,cyberpunk-pink-1  :weight bold))))
    `(magit-popup-key                 ((t (:foreground ,cyberpunk-blue+1 :weight bold))))
