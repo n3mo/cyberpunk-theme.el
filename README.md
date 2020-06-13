@@ -97,6 +97,26 @@ In addition to basic face settings, cyberpunk-theme has specially-tailored suppo
 * wanderlust\*
 * whitespace-mode\*
  
+User Customizations
+===================
+
+Like the theme but wish a few details could be adjusted to your own individual needs? No problem--you can adjust individual theme face attributes anywhere in your ~/.emacs.d configurations files. One way to accomplish this would be to create a hook that runs after load-theme is ran. Then, you can add hooks to change individual faces in the theme. For example, if rather than the default you wanted isearch matches to be underlined in yellow, you could place the following anywhere in your emacs configuration:
+
+```lisp
+(defvar after-load-theme-hook nil
+  "Hook run after a color theme is loaded using `load-theme'.")
+(defadvice load-theme (after run-after-load-theme-hook activate)
+  "Run `after-load-theme-hook'."
+  (run-hooks 'after-load-theme-hook))
+
+(add-hook 'after-load-theme-hook
+	  (lambda ()
+	    (set-face-attribute 'lazy-highlight nil
+				:underline '(:color "yellow")
+				:foreground 'unspecified
+				:background 'unspecified)))
+```
+
 Acknowledgments 
 ===============
 
