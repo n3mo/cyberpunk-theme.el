@@ -828,7 +828,7 @@
    `(Info-quoted ((,class (:inherit fixed-pitch-serif :foreground ,cyberpunk-pink))))
 
    ;; dired
-   `(dired-symlink-face ((,class (:foreground ,cyberpunk-pink))))
+   `(dired-symlink ((,class (:foreground ,cyberpunk-pink))))
 
    ;; dired+
    `(diredp-symlink ((,class (:foreground ,cyberpunk-pink))))
