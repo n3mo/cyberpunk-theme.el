@@ -828,11 +828,31 @@
    `(Info-quoted ((,class (:inherit fixed-pitch-serif :foreground ,cyberpunk-pink))))
 
    ;; dired
-   `(dired-symlink-face ((,class (:foreground ,cyberpunk-pink))))
+   `(dired-symlink ((,class (:foreground ,cyberpunk-pink))))
 
    ;; dired+
    `(diredp-symlink ((,class (:foreground ,cyberpunk-pink))))
    `(diredp-compressed-file-suffix ((,class (:foreground ,cyberpunk-blue-1))))
+
+   ;; diredfl
+   `(diredfl-dir-name ((,class (:foreground ,cyberpunk-pink-1))))
+   `(diredfl-dir-heading ((,class (:foreground ,cyberpunk-green+2))))
+   `(diredfl-file-name ((,class (:foreground ,cyberpunk-fg))))
+   `(diredfl-file-suffix ((,class (:foreground ,cyberpunk-yellow-1))))
+   `(diredfl-dir-priv ((,class (:foreground ,cyberpunk-blue-6))))
+   `(diredfl-read-priv ((,class (:foreground ,cyberpunk-yellow-4))))
+   `(diredfl-write-priv ((,class (:foreground ,cyberpunk-pink))))
+   `(diredfl-exec-priv ((,class (:foreground ,cyberpunk-green-1))))
+   `(diredfl-no-priv ((,class (:foreground ,cyberpunk-fg))))
+   `(diredfl-rare-priv ((,class (:foreground ,cyberpunk-blue))))
+   `(diredfl-symlink ((,class (:foreground ,cyberpunk-pink))))
+   `(diredfl-flag-mark ((,class (:background ,cyberpunk-bg+2 :foreground ,cyberpunk-yellow))))
+   `(diredfl-flag-mark-line ((,class (:background ,cyberpunk-bg-05))))
+   `(diredfl-deletion ((,class (:background ,cyberpunk-pink-2 :foreground ,cyberpunk-yellow))))
+   `(diredfl-deletion-file-name ((,class (:foreground ,cyberpunk-red))))
+   `(diredfl-date-time ((,class (:foreground ,cyberpunk-blue-1))))
+   `(diredfl-number ((,class (:foreground ,cyberpunk-green+1))))
+   `(diredfl-ignored-file-name ((,class (:foreground ,cyberpunk-gray-3))))
 
    ;; ivy
    `(ivy-current-match ((,class (:box (:line-width 3 :color ,cyberpunk-magenta :style pressed-button) :weight bold))))
